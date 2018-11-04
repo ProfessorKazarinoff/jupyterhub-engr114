@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>MyPCC Login | Portland Community College</title>
+    <!-- 4 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
+    <link href="libs/bootstrap_3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Roboto.css" rel="stylesheet">
+    <link href="css/custom-common.css" rel="stylesheet">
+    <link href="/authenticationendpoint/ellucian/index.css" rel="stylesheet">
+
+    <!--[if lt IE 10]>
+    <link href="/authenticationendpoint/ellucian/index-ie.css" rel="stylesheet">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- add the PCC styles -->
+    <link rel="stylesheet" href="/authenticationendpoint/pcc/styles/pcc.css"/>
+    <link rel="icon" href="/authenticationendpoint/pcc/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<!-- header -->
+<header class="header header-default hidden">
+    <div class="container-fluid"><br></div>
+    <div class="container-fluid">
+        <div class="pull-left brand float-remove-xs text-center-xs">
+            <a href="#">
+                <img src="images/logo-inverse.svg" alt="Ellucian Ethos Identity" title="Ellucian Ethos Identity"
+                     class="logo">
+                <h1><em>Ellucian Ethos Identity</em></h1>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- page content -->
+<div class="container-fluid body-wrapper">
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+            <div class="wrapper">
+                <!-- PCC remove <img src="/authenticationendpoint/ellucian/ellucian-logo.png" alt="Ellucian Ethos Identity"/>-->
+                <!-- add the PCC logo and link -->
+                <a href="https://www.pcc.edu"><img src="/authenticationendpoint/pcc/images/pcc-logo.png"
+                                                   alt="Portland Community College logo" class="logo"/></a>
+                <!-- add return to PCC home -->
+                <a href="https://www.pcc.edu/" class="return-home">Return to PCC home</a>
+
+                <div class="stripe"></div>
+
+
+                <!-- OUTAGES AND ANNOUNCEMENTS, COMMENT OUT IN JS FILE WHEN NOT NEEDED -->
+                <div id="outageMessage">
+                    <script src="https://www.pcc.edu/resources/web/mypcc/outage.js?stamp=1528832496092"></script>
+                </div>
+                <!-- END OUTAGES -->
+
+
+                <h1 class="text-normal" role="banner">Sign in to your MyPCC account</h1><!-- vmssot1 -->
+
+                <!-- <div class="col-md-12"> -->
+
+                <!-- content -->
+                <!-- <div class="container col-xs-10 col-sm-6 col-md-6 col-lg-3 col-centered wr-content wr-login col-centered"> -->
+                <!-- <div> -->
+                <!-- <h2 class="wr-title uppercase blue-bg padding-double white boarder-bottom-blue margin-none">Sign in to your MyPCC account</h2> -->
+                <!-- </div> -->
+                <!-- <div class="boarder-all "> -->
+                <!-- <div class="clearfix"></div> -->
+                <!-- <div class="padding-double login-form"> -->
+
+
+                <form action="../commonauth" method="post" id="loginForm" class="form-inline" role="form">
+
+                    <!-- PCC UPDATED FORM - elements are moved around, Bootstrap columns added, some code located in basicauth.jsp -->
+                    <div id="loginTable1" class="identity-box">
+
+
+                        <div class="row">
+                            <!-- username -->
+                            <div class="col-sm-12 col-md-5">
+                                <div class="form-group">
+                                    <label class="sr-only" for="username">Username</label>
+                                    <input id="username" name="username" size="30" type="text" class="form-control"
+                                           tabindex="1"
+                                           placeholder="Username">
+                                </div>
+                            </div> <!-- col-sm-12 col-md-5 -->
+
+                            <!-- password -->
+                            <div class="col-sm-12 col-md-5">
+                                <div class="form-group">
+                                    <label class="sr-only" for="password">Password</label>
+                                    <input id="password" name="password" size="30" type="password" class="form-control"
+                                           placeholder="Password" tabindex="2">
+                                    <input type="hidden" name="sessionDataKey"
+                                           value='ce57eef0-adf3-4e5d-9495-96eef2fcae1e'>
+                                </div>
+                            </div> <!-- col-sm-12 col-md-5 -->
+
+                            <!-- sign in button -->
+                            <div class="col-sm-12 col-md-2">
+                                <input type="submit" value="Sign in" class="btn btn-default">
+                            </div> <!-- col-sm-12 col-md-2 -->
+                        </div> <!-- row for username, password, sign in button -->
+
+                        <!-- stay signed in and forgot password, etc. -->
+                        <div class="row" id="help-links">
+                            <div class="col-sm-12 col-md-5 hidden-xs">
+                                <!--<div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="chkRemember" name="chkRemember" tabindex="3">Stay signed in
+                                    </label>
+                                </div>--> <!-- checkbox -->
+                            </div> <!-- col-sm-12 col-md-5 -->
+                            <div class="col-sm-12 col-md-7">
+                                <a class="link-padding" href="https://account.pcc.edu/selfservice/accountRecovery/find">Forgot
+                                    your password?</a>
+                                <a class="link-padding" href="https://account.pcc.edu/selfservice/accountClaim/getOtp">First
+                                    time user?</a>
+                                <a class="link-padding" href="http://www.pcc.edu/resources/web/mypcc/login-help.html"
+                                   style="white-space:nowrap">Need help logging in?</a>
+                            </div> <!-- sm-12 col-md-7 -->
+
+                        </div>  <!-- row form-group force-display-block -->
+
+                        <!--<div class="col-xs-12 form-group">
+
+                    </div>
+                    <div class="clearfix"></div>-->
+                    </div> <!-- loginTable1 identity-box -->
+                </form>
+
+
+                <!-- <div class="clearfix"></div> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- /content -->
+
+                <!-- </div> -->
+            </div>
+            <!-- /content/body -->
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <!-- PCC POLICY STATEMENT -->
+    <div id="policy-bottom" class="policy-hide" tabindex="0">
+        <h3>Terms of use</h3>
+        <p>Be advised that by entering your username and password on this site, you are requesting access to PCC systems
+            and agree to the conditions of all applicable policies and contracts. Students also agree to the conditions
+            of the <a href="//www.pcc.edu/about/policy/student-rights/student-rights.pdf#code-of-student-conduct">Code
+                of Student Conduct</a>. Employees agree to abide by all applicable employee <a
+                    href="//www.pcc.edu/about/policy/">policies</a> and contracts. Your PCC account, including your
+            pcc.edu email address, is provided for access to PCC systems only. Do not use your PCC credentials to create
+            accounts or authenticate to external services not provided or supported by PCC.</p>
+    </div> <!-- END POLICY STATEMENT -->
+
+    <script src="libs/jquery_1.11.3/jquery-1.11.3.js"></script>
+    <script src="libs/bootstrap_3.3.5/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.main-link').click(function () {
+                $('.main-link').next().hide();
+                $(this).next().toggle('fast');
+                var w = $(document).width();
+                var h = $(document).height();
+                $('.overlay').css("width", w + "px").css("height", h + "px").show();
+            });
+            $('[data-toggle="popover"]').popover();
+            $('.overlay').click(function () {
+                $(this).hide();
+                $('.main-link').next().hide();
+            });
+
+        });
+
+        function myFunction(key, value, name) {
+            var object = document.getElementById(name);
+            var domain = object.value;
+
+
+            if (domain != "") {
+                document.location = "../commonauth?idp=" + key + "&authenticator=" + value +
+                    "&sessionDataKey=ce57eef0-adf3-4e5d-9495-96eef2fcae1e&domain=" +
+                    domain;
+            } else {
+                document.location = "../commonauth?idp=" + key + "&authenticator=" + value +
+                    "&sessionDataKey=ce57eef0-adf3-4e5d-9495-96eef2fcae1e";
+            }
+        }
+
+        function handleNoDomain(key, value) {
+            document.location = "../commonauth?idp=" + key + "&authenticator=" + value +
+                "&sessionDataKey=ce57eef0-adf3-4e5d-9495-96eef2fcae1e";
+        }
+
+        $('#popover').popover({
+            html: true,
+            title: function () {
+                return $("#popover-head").html();
+            },
+            content: function () {
+                return $("#popover-content").html();
+            }
+        });
+
+    </script>
+    <!-- PCC SCRIPTS -->
+    <script src="/authenticationendpoint/pcc/scripts/pcc.js"></script>
+    <script>
+        // alert (maiin login page/homepage only)
+        $.getScript("https://alert.pcc.edu/wp-content/pcc-cache/alert.js", function () {
+            $("body").prepend(alertText)
+        }), $("#username").focus();
+    </script>
+</body>
+</html>
+
+
+
+

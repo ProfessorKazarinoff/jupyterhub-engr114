@@ -1,0 +1,443 @@
+/* ----------------------------------------------------------------
+  login page for PCC apps
+
+  owner:   PCC Web Team (webteam@pcc.edu)
+  author:  Ali Gray (ali.gray@pcc.edu)
+  created: 2016-10-29
+  updated:
+---------------------------------------------------------------- */
+@import url(../fonts/open-sans/stylesheet.css);
+/* ----------------------------------------------------------------
+    typography
+---------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: open_sanslight, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-family: open_sanslight, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal; }
+  h1 em, h1 i, h2 em, h2 i, h3 em, h3 i, h4 em, h4 i, h5 em, h5 i, h6 em, h6 i {
+    font-family: open_sanslight, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal; }
+  h1 strong, h1 b, h2 strong, h2 b, h3 strong, h3 b, h4 strong, h4 b, h5 strong, h5 b, h6 strong, h6 b {
+    font-family: open_sanslight, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal; }
+
+strong, b {
+  font-family: open_sanssemibold, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal; }
+
+em, i {
+  font-family: open_sansitalic, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal; }
+
+/* ----------------------------------------------------------------
+    body / container UI
+---------------------------------------------------------------- */
+body {
+  font-family: open_sansregular, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background: #e9e9e9 url("../images/background.jpg") no-repeat fixed center center/cover;
+  }
+
+/* --------------------------------------
+  	white box
+-------------------------------------- */
+.wrapper {
+  -webkit-box-shadow: 0 0 1.875em rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 1.875em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1.875em rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+  margin-bottom: 10%;
+  padding: 1.5625em; }
+  .wrapper .logo {
+    height: auto;
+    width: 151px; }
+  .wrapper img[alt="Ellucian Identity Service"] {
+    display: none; }
+  .wrapper .stripe {
+    background: #008099;
+    background: linear-gradient(rgba(0, 128, 153, 0.7), rgba(0, 128, 153, 0.7)), url("../images/default-header.png");
+    background-repeat: no-repeat;
+    background-color: #008099;
+    background-size: cover;
+    filter: none;
+    margin: 1.25em -22px 0; }
+
+/* --------------------------------------
+  	upper section
+    logo and return to PCC home
+-------------------------------------- */
+.pull-right {
+  display: none; }
+
+.return-home {
+  float: right;
+  font-size: 0.92857em; }
+
+/* ----------------------------------------------------------------
+    form components
+---------------------------------------------------------------- */
+/* --------------------------------------
+  	bootstrap column adjustments
+-------------------------------------- */
+#loginTable1 .row {
+  margin-bottom: 1.25em; }
+  #loginTable1 .row [class*="col-md-"] {
+    padding-left: 8px;
+    padding-right: 8px; }
+    #loginTable1 .row [class*="col-md-"]:first-of-type {
+      padding-left: 15px; }
+    #loginTable1 .row [class*="col-md-"]:last-of-type {
+      padding-right: 15px; }
+  #loginTable1 .row.form-group.force-display-block [class*="col-md-"]:last-of-type {
+    padding-left: 20px; }
+
+/* --------------------------------------
+  	links
+-------------------------------------- */
+a {
+  font-family: open_sansregular, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #006b80;
+  font-size: 1em;
+  text-decoration: underline; }
+  a:hover, a:visited:hover, a:focus {
+    color: #162330; }
+  a:link:focus, a:visited:focus {
+    color: #162330; }
+  a:visited {
+    color: #008099; }
+  a:link:active, a:visited:active {
+    color: #263c53; }
+
+/* --------------------------------------
+  	inputs
+-------------------------------------- */
+.form-inline .form-group {
+  width: 100%; }
+
+.form-inline .form-control {
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  width: 100%; }
+  .form-inline .form-control:focus {
+    -webkit-box-shadow: 0 0 0 #fff;
+    -moz-box-shadow: 0 0 0 #fff;
+    box-shadow: 0 0 0 #fff;
+    border-color: #008099; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset; }
+
+/* --------------------------------------
+  	buttons
+-------------------------------------- */
+.wrapper .btn {
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  background: #008099;
+  border: none;
+  color: #fff;
+  }
+  .wrapper .btn:hover, .wrapper .btn:focus, .wrapper .btn:active {
+    /* background: #263c53; */
+    }
+
+/* --------------------------------------
+  	login help links
+-------------------------------------- */
+#help-links {
+  margin-top: 10px; }
+
+/* --------------------------------------
+  	"sign in to your account" heading
+-------------------------------------- */
+h1,
+.text-normal {
+  font-size: 1.7em;
+  padding-bottom: 0.313em; }
+
+/* --------------------------------------
+  	server indicator
+    visually hide it but can still see in view source
+-------------------------------------- */
+#loginTable1 p:first-of-type {
+  height: 1px;
+  left: -9999px;
+  overflow: hidden;
+  position: absolute; }
+
+/* --------------------------------------
+  	stay signed in
+-------------------------------------- */
+.wrapper .checkbox {
+  margin: 0; }
+  .wrapper .checkbox input[type="checkbox"] {
+    margin-left: 0; }
+  .wrapper .checkbox label {
+    font-size: 0.92857em; }
+
+/* --------------------------------------
+  	forgot your password
+-------------------------------------- */
+.link-padding {
+  font-size: 0.92857em;
+  margin: 0 0.625em 0 0; }
+
+/* ----------------------------------------------------------------
+    other page elements
+---------------------------------------------------------------- */
+/* --------------------------------------
+  	policy statement on the bottom
+-------------------------------------- */
+#policy-bottom {
+  -webkit-transition: max-height 0.4s ease-in-out;
+  -moz-transition: max-height 0.4s ease-in-out;
+  -ms-transition: max-height 0.4s ease-in-out;
+  -o-transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed; }
+  #policy-bottom h3 {
+    font-family: open_sanssemibold, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    background: #e9e9e9;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0;
+    padding: 0.625em 1.25em;
+    width: auto; }
+    #policy-bottom h3:hover {
+      cursor: pointer; }
+  #policy-bottom p {
+    background: #e9e9e9;
+    color: #595959;
+    display: block;
+    font-size: 0.92857em;
+    margin: 0;
+    padding: 1.25em;
+    width: 100%; }
+  #policy-bottom.policy-show h3::before, #policy-bottom.policy-hide h3::before {
+    color: #008099;
+    display: inline-block;
+    position: relative; }
+  #policy-bottom.policy-show {
+    max-height: 500px; }
+    #policy-bottom.policy-show h3::before {
+      content: "\25be";
+      padding-right: 0.625em; }
+  #policy-bottom.policy-hide {
+    max-height: 32px; }
+    #policy-bottom.policy-hide h3::before {
+      content: "\25be";
+      padding-left: 0.625em;
+      top: 3px;
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
+
+/* --------------------------------------
+  	policy statement in main white box
+    not used
+-------------------------------------- */
+#policy {
+  border-top: 1px solid #c1c1c1;
+  color: #595959;
+  font-style: italic;
+  font-size: 0.85714em;
+  margin-top: 2.5em;
+  padding-top: 1.25em; }
+
+/* --------------------------------------
+  	bulletin box in main white box
+-------------------------------------- */
+.bulletin {
+  background: #e9e9e9;
+  border-bottom: 2px solid #cacaca;
+  color: #333;
+  margin: 1.25em 0; }
+  .bulletin h4 {
+    background: #e37246;
+    border-bottom: 2px solid #cd501f;
+    color: #fff;
+    font-size: 1.42857em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0.313em 15px; }
+  .bulletin p {
+    padding: 0.625em 1.25em 0; }
+  .bulletin .callout-contents {
+    padding: 0.625em 15px; }
+
+/* --------------------------------------
+  	alert at top of page
+-------------------------------------- */
+#alert {
+  background: #9e0c0f;
+  padding: 0.9375em 0; }
+  #alert .large-1 {
+    display: none; }
+  #alert .large-11 {
+    margin: 0 auto;
+    max-width: 750px; }
+  #alert p {
+    color: #fff;
+    margin: 0;
+    padding: 0.125em 0 0; }
+    #alert p a {
+      color: #fff; }
+      #alert p a:hover, #alert p a:focus {
+        color: #162330; }
+
+/* --------------------------------------
+  	feedback/new mypcc callout
+-------------------------------------- */
+/*--- fade-in animation ---*/
+@-webkit-keyframes feedback {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes feedback {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.feedback {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #c2e8f0;
+  border-bottom: 2px solid #91d6e3;
+  color: #333;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: feedback;
+  animation-duration: 2s;
+  animation-name: feedback;
+  margin: 1.25em 0;
+  padding: 1.25em; }
+  .feedback p {
+    margin: 0;
+    padding: 0; }
+
+/* --------------------------------------
+  	login failed message
+-------------------------------------- */
+.login-error.text-danger {
+  margin-top: 1.25em; }
+  .login-error.text-danger .text-normal {
+    font-size: 1.35714em; }
+
+.new-user {
+  color: #333;
+  display: block;
+  font-size: 0.71429em;
+  padding: 0.313em 0 0.625em 19px; }
+
+/* ----------------------------------------------------------------
+    media queries
+---------------------------------------------------------------- */
+/* --------------------------------------
+  	medium and small screens
+    max-width 1024px
+-------------------------------------- */
+@media only screen and (max-width: 64em) {
+  #loginTable1 .row [class*="col-md-"] {
+    margin: 0.625em 0;
+    padding-left: 15px;
+    padding-right: 15px; }
+  #loginTable1 .row.form-group.force-display-block [class*="col-md-"]:last-of-type {
+    padding-left: 15px; }
+  #loginTable1 p + .row {
+    margin-bottom: 0.625em; } }
+/* --------------------------------------
+  	medium screens
+    min-width 641px and max-width 1024px
+-------------------------------------- */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  body {
+    background-image: url("../images/background-medium.jpg"); }
+
+  .wrapper {
+    margin-top: 5%;
+    margin-bottom: 5%; }
+    .wrapper .stripe {
+      background: #008099;
+      background: linear-gradient(rgba(0, 128, 153, 0.7), rgba(0, 128, 153, 0.7)), url("../images/default-header-medium.png");
+      background-repeat: no-repeat;
+      background-color: #008099;
+      background-size: cover;
+      margin: 16px -16px;
+	  padding: 16px;}
+
+  #loginTable1 .row [class*="col-md-"] {
+    margin: 0.625em 0;
+    padding-left: 15px;
+    padding-right: 15px; } }
+/* --------------------------------------
+  	small screens
+    max-width 640px
+-------------------------------------- */
+@media only screen and (max-width: 40em) {
+  body {
+    background-image: url("../images/background-small.jpg"); }
+
+  .wrapper {
+    margin-top: 4%;
+    margin-bottom: 4%; }
+    .wrapper .stripe {
+      background: #008099;
+      background: linear-gradient(rgba(0, 128, 153, 0.7), rgba(0, 128, 153, 0.7)), url("../images/default-header-small.png");
+      background-repeat: no-repeat;
+      background-color: #008099;
+      background-size: cover; }
+
+  .return-home {
+    width: 30%; }
+
+  .link-padding {
+    display: block;
+    padding-top: 0.625em; }
+
+  #policy-bottom h3 {
+    font-size: 0.92857em; }
+  #policy-bottom p {
+    font-size: 0.85714em; }
+  #policy-bottom.policy-hide {
+    height: 30px; } }
+/* --------------------------------------
+  	extra small screens
+    max-width 320px
+-------------------------------------- */
+@media only screen and (max-width: 20em) {
+  .wrapper > a {
+    display: block;
+    margin-bottom: 0.9375em;
+    text-align: center;
+    width: 100%; }
+    .wrapper > a.pull-right {
+      display: none; }
+
+  .stripe {
+    margin-top: 50px !important; } }

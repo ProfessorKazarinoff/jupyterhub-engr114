@@ -1,0 +1,95 @@
+{% extends "page.html" %}
+
+{% if announcement_login %}
+  {% set announcement = announcement_login %}
+{% endif %}
+
+{% block login_widget %}
+{% endblock %}
+
+{% block main %}
+
+{% block login %}
+
+<div class="container-fluid body-wrapper">
+  <div class="row">
+    <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+      <div class="wrapper">
+        <a href="https://www.pcc.edu"><img src="https://authenticate.pcc.edu/authenticationendpoint/pcc/images/pcc-logo.png" alt="Portland Community College logo" class="logo"></a>
+        <a href="https://www.pcc.edu/" class="return-home"> Go to PCC home</a>
+        <div class="stripe"></div>
+        <h1 class="text-normal" role="banner">Sign in with your MyPCC account</h1>
+
+        <div id="loginTable1" class="identity-box">
+
+
+
+
+
+        <div class="row">
+        <!-- username -->
+
+
+          {% if custom_html %}
+          {{ custom_html | safe }}
+          {% elif login_service %}
+          <div class="col-sm-12 col-md-5">
+            <a role="button" class='btn btn-pcc btn-lg' href='{{authenticator_login_url}}'>
+              Sign in with {{login_service}}
+            </a>
+          </div>
+          {% endif %}
+
+
+            <!-- sign in button -->
+
+      </div> <!-- row for username, password, sign in button -->
+
+        <!-- stay signed in and forgot password, etc. -->
+        <div class="row" id="help-links">
+
+            <div class="col-sm-12 col-md-7">
+                <a class="link-padding" href="https://account.pcc.edu/selfservice/accountRecovery/find">Forgot your password?</a>
+                <a class="link-padding" href="https://account.pcc.edu/selfservice/accountClaim/getOtp">First time user?</a>
+                <a class="link-padding" href="http://www.pcc.edu/resources/web/mypcc/login-help.html" style="white-space:nowrap">Need help logging in?</a>
+            </div> <!-- sm-12 col-md-7 -->
+
+        </div>
+
+        <!--<div class="col-xs-12 form-group">
+
+    </div>
+    <div class="clearfix"></div>-->
+  </div>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock login %}
+{% endblock %}
+
+
+{% block script %}
+{{super()}}
+
+<script>
+if (window.location.protocol === "http:") {
+  // unhide http warning
+  var warning = document.getElementById('insecure-login-warning');
+  warning.className = warning.className.replace(/\bhidden\b/, '');
+}
+</script>
+
+{% endblock %}

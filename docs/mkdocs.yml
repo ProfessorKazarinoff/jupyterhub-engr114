@@ -1,0 +1,43 @@
+site_name: ENGR114-JupyterHub-Deployment
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'deep orange'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  logo:
+    icon: 'build'
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - footnotes
+  - toc
+repo_url: https://github.com/ProfessorKazarinoff/jupyterhub-engr114
+extra_css: 
+    - static/css/toc.css
+copyright: 'Copyright &copy; 2018 Peter D. Kazarinoff'
+
+nav:
+  - Home: index.md
+  - Set Up: setup.md
+  - DO server: doserver.md
+  - Install JupyterHub: install_jupyterhub.md
+  - DNS Routing: DNS.md
+  - SSL Certificates: ssl.md
+  - Cookie Secret and Proxy Auth Token: cookie_secret_proxy_auth_token.md
+  - Install Nginx: nginx_install.md
+  - Nginx Configuration: nginx_config.md
+  - JupyterHub Configuration: jupyterhub_config.md
+  - System Service: systemd.md
+  - GitHub OAuth: github_oauth.md
+  - Google OAuth: google_oauth.md
+  - JupyterLab Default Interface: jupyterlab_default.md
+  - Custom Login Page: login_page.md
+  - Assignments from GitHub: github_assignments.md
+  - Usefull Commands: useful_commands.md
