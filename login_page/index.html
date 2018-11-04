@@ -1,0 +1,770 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>Custom Login Page - ENGR114-JupyterHub-Deployment</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../static/css/toc.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#custom-login-page" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="ENGR114-JupyterHub-Deployment" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">build</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                ENGR114-JupyterHub-Deployment
+              </span>
+              <span class="md-header-nav__topic">
+                Custom Login Page
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="ENGR114-JupyterHub-Deployment" class="md-nav__button md-logo">
+      
+        <i class="md-icon">build</i>
+      
+    </a>
+    ENGR114-JupyterHub-Deployment
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../setup/" title="Set Up" class="md-nav__link">
+      Set Up
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../doserver/" title="DO server" class="md-nav__link">
+      DO server
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_jupyterhub/" title="Install JupyterHub" class="md-nav__link">
+      Install JupyterHub
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../DNS/" title="DNS Routing" class="md-nav__link">
+      DNS Routing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ssl/" title="SSL Certificates" class="md-nav__link">
+      SSL Certificates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../cookie_secret_proxy_auth_token/" title="Cookie Secret and Proxy Auth Token" class="md-nav__link">
+      Cookie Secret and Proxy Auth Token
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nginx_install/" title="Install Nginx" class="md-nav__link">
+      Install Nginx
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nginx_config/" title="Nginx Configuration" class="md-nav__link">
+      Nginx Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../jupyterhub_config/" title="JupyterHub Configuration" class="md-nav__link">
+      JupyterHub Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../systemd/" title="System Service" class="md-nav__link">
+      System Service
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../github_oauth/" title="GitHub OAuth" class="md-nav__link">
+      GitHub OAuth
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../google_oauth/" title="Google OAuth" class="md-nav__link">
+      Google OAuth
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../jupyterlab_default/" title="JupyterLab Default Interface" class="md-nav__link">
+      JupyterLab Default Interface
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Custom Login Page
+      </label>
+    
+    <a href="./" title="Custom Login Page" class="md-nav__link md-nav__link--active">
+      Custom Login Page
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-templates-directory-and-populate-it-with-jinja-templates" title="Create a templates directory and populate it with Jinja templates" class="md-nav__link">
+    Create a templates directory and populate it with Jinja templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-loginhtml" title="Modify login.html" class="md-nav__link">
+    Modify login.html
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-jupyterhub_configpy" title="Modify jupyterhub_config.py" class="md-nav__link">
+    Modify jupyterhub_config.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style-the-login-page-with-css" title="Style the login page with css" class="md-nav__link">
+    Style the login page with css
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-jupyterhub" title="Restart JupyterHub" class="md-nav__link">
+    Restart JupyterHub
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../github_assignments/" title="Assignments from GitHub" class="md-nav__link">
+      Assignments from GitHub
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../useful_commands/" title="Usefull Commands" class="md-nav__link">
+      Usefull Commands
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-templates-directory-and-populate-it-with-jinja-templates" title="Create a templates directory and populate it with Jinja templates" class="md-nav__link">
+    Create a templates directory and populate it with Jinja templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-loginhtml" title="Modify login.html" class="md-nav__link">
+    Modify login.html
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-jupyterhub_configpy" title="Modify jupyterhub_config.py" class="md-nav__link">
+    Modify jupyterhub_config.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style-the-login-page-with-css" title="Style the login page with css" class="md-nav__link">
+    Style the login page with css
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-jupyterhub" title="Restart JupyterHub" class="md-nav__link">
+    Restart JupyterHub
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/edit/master/docs/login_page.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="custom-login-page">Custom Login Page</h1>
+<p>The JupyterHub login page looks like this:</p>
+<p><img alt="jupyterhub login page" src="../images/login_with_google.PNG" /></p>
+<p>But our college login page looks like this:</p>
+<p><img alt="jupyterhub login page" src="../images/college_login_page.PNG" /></p>
+<p>For users to feel comfortable with logging into the JupyterHub server, we'll make the JupyterHub login page look more like the college login page.</p>
+<div class="toc">
+<ul>
+<li><a href="#custom-login-page">Custom Login Page</a><ul>
+<li><a href="#create-a-templates-directory-and-populate-it-with-jinja-templates">Create a templates directory and populate it with Jinja templates</a></li>
+<li><a href="#modify-loginhtml">Modify login.html</a></li>
+<li><a href="#modify-jupyterhub_configpy">Modify jupyterhub_config.py</a></li>
+<li><a href="#style-the-login-page-with-css">Style the login page with css</a></li>
+<li><a href="#restart-jupyterhub">Restart JupyterHub</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="create-a-templates-directory-and-populate-it-with-jinja-templates">Create a templates directory and populate it with Jinja templates</h2>
+<p>This was a time consuming and fussy task. It involved a lot of messing around with css and html.</p>
+<p>First, a set of custom <strong>jinja</strong> templates need to be created. When JupyterHub runs, there is a directory of jinja templates that build the html users see when they browse to the login page. These jinga templates are burried deep in the JupyterHub package code. For my JupyterHub installation on the server, I found the jinja template files in the <code>/opt/aminconda3/envs/pkgs/jupyterhub/share/jupyterhub/templates/</code> directory. If you aren't using a virtual environment, the JupyterHub package directory name will likey be different:</p>
+<pre><code class="text">/opt/anaconda3/envs/pkgs/jupyterhub/share/jupyterhub/templates/
+├── 404.html
+├── admin.html
+├── error.html
+├── home.html
+├── login.html
+├── logout.html
+├── page.html
+├── spawn.html
+├── spawn_pending.html
+└── token.html
+</code></pre>
+
+<p>Now we need to copy these templates into a new <code>/etc/jupyterhub/templates</code> directory. Once copied, we can modify the templates and create a new JupyterHub login page. <code>login.html</code> file we'll customize.</p>
+<pre><code class="text">$ cd /opt/miniconda3/envs/jupyterhubenv/pkgs/jupyterhub/share/jupyter/hub/
+$ ls
+$ cp -R templates /etc/jupyterhub/templates/
+$ cd /etc/jupyterhub/templates
+$ ls
+</code></pre>
+
+<h2 id="modify-loginhtml">Modify login.html</h2>
+<p>Open up the <code>login.html</code> file and modify it with any html that you want to show up when a user goes to the JupyterHub site.</p>
+<p>I messed around for WAY to long trying to get my custom login page to look like the college login page. An important piece of html that needs to stay in the <code>login.html</code> file is the <code>&lt;a&gt;</code> tag that links to the authentication url. The complete tag is detailed below</p>
+<pre><code class="html">&lt;!–– login.html ––&gt;
+
+&lt;a role=&quot;button&quot; class=&quot;btn btn-jupyter btn-lg&quot; href=&quot;/hub/oauth_login?next=&quot;&gt;
+    Sign in with Portland Community College
+&lt;/a&gt;
+</code></pre>
+
+<p>I also kept in the jinga tag at the top of the file that brings in all of the formatting from login.html's parent template page.html</p>
+<pre><code class="html">&lt;!–– login.html ––&gt;
+
+{% extends &quot;page.html&quot; %}
+</code></pre>
+
+<p>All the changes I made to the login template were inside the "login" block of <code>login.html</code>. You can find my complete <code>login.html</code> file <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/blob/master/templates/login.html">here</a></p>
+<pre><code class="html">{% block login %}
+
+&lt;!–– make changes here ––&gt;
+
+{% endblock login %}
+</code></pre>
+
+<h2 id="modify-jupyterhub_configpy">Modify jupyterhub_config.py</h2>
+<p>Now we need to modify the <code>jupyterhub_config.py</code> file so that our new set of custom jinja templates are used instead of the default jinja templates.</p>
+<p>A problem I initially had was I set the directory path of the custom templates as <code>templates</code> and the login page didn't work as expected. When I changed the directory path to <code>templates/</code> the problem was resolved.</p>
+<pre><code class="python"># /etc/jupyterhub/jupyterhub_config.py
+
+...
+
+# sets a custom html template at the login screen.
+c.JupyterHub.template_paths = ['/etc/jupyterhub/templates/']
+
+...
+
+</code></pre>
+
+<p><br></p>
+<h2 id="style-the-login-page-with-css">Style the login page with css</h2>
+<p>Finally, the <code>style.min.css</code> file needs to be modified so that the login page styling looks a little more like the college login page.</p>
+<p>This is another thing I messed around with for a long time, a WAY to long time. I couldn't figure out a way to get JupyterHub to use a custom .css file. I tried creating a .css file in the new custom templates directory, but JupyterHub wouldn't copy it as a static asset when the server launched. I also tried putting a separate .css file deep inside of the JupyterHub package code. When the server ran, it seemed to copy the custom .css file (I could see the custom .css file using chrome's inspect element tool). But for some reason the custom .css file would be blank when server serve was running, even though the custom .css file contained a whole bunch of css code when viewed deep in the JupyterHub package code.</p>
+<p>The solution I finally got to work was modifying the <code>style.min.css</code> file itself that JupyterHub uses. This file is buried deep in the JupyterHub package code:</p>
+<pre><code>/opt/miniconda3/envs/jupyterhubenv/pkgs/jupyterhub/share/jupyter/hub/static/css/
+├── style.min.css
+└── style.min.css.map
+</code></pre>
+
+<p>Modify the <code>style.min.css</code> file to include all the custom css styling desired (find my complete css file <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/blob/master/style.min.css">here</a>) </p>
+<h2 id="restart-jupyterhub">Restart JupyterHub</h2>
+<p>With changes to the <code>login.html</code> file and s<code>tyle.min.css</code> file complete, we can restart JupyterHub and view the changes rendered on the login page.</p>
+<pre><code class="text">$ sudo systemctl stop jupyterhub
+$ sudo systemctl start jupyterhub
+$ sudo systemctl status jupyterhub
+# [Ctrl]-[c] to exit
+</code></pre>
+
+<p>Below is the look of the modified login page in all it's custom html and css glory:</p>
+<p><img alt="login page image" src="../images/custom_login_page.PNG" /></p>
+<p><br></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../jupyterlab_default/" title="JupyterLab Default Interface" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                JupyterLab Default Interface
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../github_assignments/" title="Assignments from GitHub" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Assignments from GitHub
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 Peter D. Kazarinoff
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,737 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>JupyterLab Default Interface - ENGR114-JupyterHub-Deployment</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../static/css/toc.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#jupyterlab-default-interface" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="ENGR114-JupyterHub-Deployment" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">build</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                ENGR114-JupyterHub-Deployment
+              </span>
+              <span class="md-header-nav__topic">
+                JupyterLab Default Interface
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="ENGR114-JupyterHub-Deployment" class="md-nav__button md-logo">
+      
+        <i class="md-icon">build</i>
+      
+    </a>
+    ENGR114-JupyterHub-Deployment
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../setup/" title="Set Up" class="md-nav__link">
+      Set Up
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../doserver/" title="DO server" class="md-nav__link">
+      DO server
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_jupyterhub/" title="Install JupyterHub" class="md-nav__link">
+      Install JupyterHub
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../DNS/" title="DNS Routing" class="md-nav__link">
+      DNS Routing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ssl/" title="SSL Certificates" class="md-nav__link">
+      SSL Certificates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../cookie_secret_proxy_auth_token/" title="Cookie Secret and Proxy Auth Token" class="md-nav__link">
+      Cookie Secret and Proxy Auth Token
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nginx_install/" title="Install Nginx" class="md-nav__link">
+      Install Nginx
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nginx_config/" title="Nginx Configuration" class="md-nav__link">
+      Nginx Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../jupyterhub_config/" title="JupyterHub Configuration" class="md-nav__link">
+      JupyterHub Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../systemd/" title="System Service" class="md-nav__link">
+      System Service
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../github_oauth/" title="GitHub OAuth" class="md-nav__link">
+      GitHub OAuth
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../google_oauth/" title="Google OAuth" class="md-nav__link">
+      Google OAuth
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        JupyterLab Default Interface
+      </label>
+    
+    <a href="./" title="JupyterLab Default Interface" class="md-nav__link md-nav__link--active">
+      JupyterLab Default Interface
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modify-jupyterhub_configy" title="Modify jupyterhub_config.y" class="md-nav__link">
+    Modify jupyterhub_config.y
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-jupyterhub" title="Restart JupyterHub" class="md-nav__link">
+    Restart JupyterHub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-jupyterlab-extension-for-jupyterhub" title="Install JupyterLab extension for JupyterHub" class="md-nav__link">
+    Install JupyterLab extension for JupyterHub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-jupyterhub_1" title="Restart JupyterHub" class="md-nav__link">
+    Restart JupyterHub
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../login_page/" title="Custom Login Page" class="md-nav__link">
+      Custom Login Page
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../github_assignments/" title="Assignments from GitHub" class="md-nav__link">
+      Assignments from GitHub
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../useful_commands/" title="Usefull Commands" class="md-nav__link">
+      Usefull Commands
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modify-jupyterhub_configy" title="Modify jupyterhub_config.y" class="md-nav__link">
+    Modify jupyterhub_config.y
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-jupyterhub" title="Restart JupyterHub" class="md-nav__link">
+    Restart JupyterHub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-jupyterlab-extension-for-jupyterhub" title="Install JupyterLab extension for JupyterHub" class="md-nav__link">
+    Install JupyterLab extension for JupyterHub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-jupyterhub_1" title="Restart JupyterHub" class="md-nav__link">
+    Restart JupyterHub
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/edit/master/docs/jupyterlab_default.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="jupyterlab-default-interface">JupyterLab Default Interface</h1>
+<p>Over the summer, when I ran JupterHub for the first time, we used the regular Jupyter notebook interface. For this deployment, I want to prototype using the JupyterLab interface. </p>
+<p>Below is the file browser in the regular Jupyter notebook interface. This is what students see now when they log into JupyterHub.</p>
+<p><img alt="Jupyter Notebook File Browser" src="../images/jupyter_notebook_file_browser.png" /></p>
+<p>But students could also be greeted by the <strong>JupyterLab</strong> interface after they log in. Luckily, the JupyterLab interface is built right into JupyterHub. We can access the JupyterLab interface by logging into JupyerHub and modifying the URL.</p>
+<p>Below is the URL when you are logged into the notebook file browser:</p>
+<pre><code>https://mydomain.org/user/user.name/tree
+</code></pre>
+
+<p>In the URL, if we remove <code>/tree</code> and replace it with <code>/lab</code> the result is the JupyterLab interface.</p>
+<pre><code>https://mydomain.org/user/user.name/lab
+</code></pre>
+
+<p>The resulting JupyterLab interface is shown below:</p>
+<p><img alt="Jupyter Notebook File Browser" src="../images/jupyterlab_interface.png" /></p>
+<p><br></p>
+<p>We can get back to the regular notebook interface by replacing <code>/lab</code> with <code>/tree</code>.</p>
+<p><br></p>
+<p>The regular Jupyter notebook interface, running a notebook, is shown below:</p>
+<p><img alt="Jupyter Notebook with plot" src="../images/jupyter_notebook_with_plot.png" /></p>
+<p>If we switch to the JupyterLab interface, the same notebook looks like this:</p>
+<p><img alt="JupyterLab Notebook with plot" src="../images/jupyterlab_notebook_with_plot.png" /></p>
+<h2 id="modify-jupyterhub_configy">Modify jupyterhub_config.y</h2>
+<p>To use JupyterLab as the default landing page (instead of the regular notebook interface), add a line to <code>jupyterhub_config.py</code> in the <code>/etc/jupyterhub/</code> directory</p>
+<pre><code class="python"># /etc/jupyterhub/jupyterhub_config.py
+
+...
+
+# Start Users at the JupyterLab Interface
+c.Spawner.default_url = '/lab'
+
+...
+</code></pre>
+
+<p>That's it. It's that easy to switch between the regular notebook and JupyterLab interfaces.</p>
+<h2 id="restart-jupyterhub">Restart JupyterHub</h2>
+<p>After <code>jupyterhub_config.py</code> is saved, let's restart JupyterHub and see the results.</p>
+<pre><code class="text">$ sudo systemctl stop jupyterhub
+$ sudo systemctl start jupyterhub
+$ sudo systemctl status jupyterhub
+# ctrl-c to exit the status pannel
+</code></pre>
+
+<p>When we log into JupyterHub, we are greated by the JupyterLab interface:</p>
+<p><img alt="JupyterLab landing page" src="../images/jupyterlab_landing_page.png" /></p>
+<h2 id="install-jupyterlab-extension-for-jupyterhub">Install JupyterLab extension for JupyterHub</h2>
+<p>Once advantage of the good old classic notebook interface is it contains buttons to login and logout of Jupyter Hub, and buttons to start and stop our server. Login/logout and server start/stop controls are absent from the JupyterLab interface. Luckily, these controls can be added into JupyterLab with the <a href="https://github.com/jupyterhub/jupyterlab-hub">JupyterHub extension for JupyterLab</a></p>
+<p>To install the JupyterLab extension for JupyterHub, log 
+into the server, then activate the <code>(jupyterhubenv)</code> virtual environment. The extenion is installed with the command below:</p>
+<pre><code class="text">$ conda activate jupyterhubenv
+(jupyterhubenv)$ jupyter labextension install @jupyterlab/hub-extension
+</code></pre>
+
+<p>I had to run this command twice to get the extension to install. Don't know why. The first time I ran the command, I was greeted by an error about installing or using yarn. But when I ran it a second time, it worked.</p>
+<p>To use JupyterLab extension, add a line to <code>jupyterhub_config.py</code> in the <code>/etc/jupyterhub/</code> directory:</p>
+<pre><code class="python"># /etc/jupyterhub/jupyterhub_config.py
+
+...
+
+# Use the JupyterLab extension for JupyterHub.
+# install with $ jupyter labextension install @jupyterlab/hub-extension
+c.Spawner.cmd = ['jupyter-labhub']
+
+...
+
+</code></pre>
+
+<h2 id="restart-jupyterhub_1">Restart JupyterHub</h2>
+<p>After <code>jupyterhub_config.py</code> is saved, restart JupyterHub and see the results.</p>
+<pre><code>$ sudo systemctl stop jupyterhub
+$ sudo systemctl start jupyterhub
+$ sudo systemctl status jupyterhub
+# [ctrl]-[c] to exit the status pannel
+</code></pre>
+
+<p>When we log into JupyterHub, we see the JupyterLab interface with a new [Hub] menu along the top:</p>
+<p><img alt="JupyterLab landing page" src="../images/hub_menu_in_jupyterlab.png" /></p>
+<p>If you select [Control Pannel], you end up with same buttons contained in the Jupyter notebook interface. </p>
+<p>If we [Stop My Server], then re-[Start My Server], we end up back in the JupyterLab interface.</p>
+<p><img alt="stop server button" src="../images/stop_server_buttons.png" /></p>
+<p><img alt="start server button" src="../images/start_server_button.png" /></p>
+<p><img alt="back to JupyterLab landing page" src="../images/back_to_jupyterlab.png" /></p>
+<p><br></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../google_oauth/" title="Google OAuth" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Google OAuth
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../login_page/" title="Custom Login Page" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Custom Login Page
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 Peter D. Kazarinoff
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

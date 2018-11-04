@@ -1,0 +1,844 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>Install JupyterHub - ENGR114-JupyterHub-Deployment</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../static/css/toc.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#install-jupyterhub" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="ENGR114-JupyterHub-Deployment" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">build</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                ENGR114-JupyterHub-Deployment
+              </span>
+              <span class="md-header-nav__topic">
+                Install JupyterHub
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="ENGR114-JupyterHub-Deployment" class="md-nav__button md-logo">
+      
+        <i class="md-icon">build</i>
+      
+    </a>
+    ENGR114-JupyterHub-Deployment
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../setup/" title="Set Up" class="md-nav__link">
+      Set Up
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../doserver/" title="DO server" class="md-nav__link">
+      DO server
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Install JupyterHub
+      </label>
+    
+    <a href="./" title="Install JupyterHub" class="md-nav__link md-nav__link--active">
+      Install JupyterHub
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#update-system" title="Update System" class="md-nav__link">
+    Update System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-miniconda" title="Install Miniconda" class="md-nav__link">
+    Install Miniconda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-miniconda3-permissions" title="Change Miniconda3 Permissions" class="md-nav__link">
+    Change Miniconda3 Permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-virtual-environment-and-install-and-packages" title="Create a virtual environment and install and packages" class="md-nav__link">
+    Create a virtual environment and install and packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-a-very-unsecured-instance-of-jupyter-hub-just-to-see-if-it-works" title="Run a very unsecured instance of Jupyter Hub just to see if it works" class="md-nav__link">
+    Run a very unsecured instance of Jupyter Hub just to see if it works
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-log-out-and-shut-down-jupyterhub" title="Quick! Log out and shut down jupyterhub" class="md-nav__link">
+    Quick! Log out and shut down jupyterhub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" title="Next Steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../DNS/" title="DNS Routing" class="md-nav__link">
+      DNS Routing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ssl/" title="SSL Certificates" class="md-nav__link">
+      SSL Certificates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../cookie_secret_proxy_auth_token/" title="Cookie Secret and Proxy Auth Token" class="md-nav__link">
+      Cookie Secret and Proxy Auth Token
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nginx_install/" title="Install Nginx" class="md-nav__link">
+      Install Nginx
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nginx_config/" title="Nginx Configuration" class="md-nav__link">
+      Nginx Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../jupyterhub_config/" title="JupyterHub Configuration" class="md-nav__link">
+      JupyterHub Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../systemd/" title="System Service" class="md-nav__link">
+      System Service
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../github_oauth/" title="GitHub OAuth" class="md-nav__link">
+      GitHub OAuth
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../google_oauth/" title="Google OAuth" class="md-nav__link">
+      Google OAuth
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../jupyterlab_default/" title="JupyterLab Default Interface" class="md-nav__link">
+      JupyterLab Default Interface
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../login_page/" title="Custom Login Page" class="md-nav__link">
+      Custom Login Page
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../github_assignments/" title="Assignments from GitHub" class="md-nav__link">
+      Assignments from GitHub
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../useful_commands/" title="Usefull Commands" class="md-nav__link">
+      Usefull Commands
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#update-system" title="Update System" class="md-nav__link">
+    Update System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-miniconda" title="Install Miniconda" class="md-nav__link">
+    Install Miniconda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-miniconda3-permissions" title="Change Miniconda3 Permissions" class="md-nav__link">
+    Change Miniconda3 Permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-virtual-environment-and-install-and-packages" title="Create a virtual environment and install and packages" class="md-nav__link">
+    Create a virtual environment and install and packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-a-very-unsecured-instance-of-jupyter-hub-just-to-see-if-it-works" title="Run a very unsecured instance of Jupyter Hub just to see if it works" class="md-nav__link">
+    Run a very unsecured instance of Jupyter Hub just to see if it works
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-log-out-and-shut-down-jupyterhub" title="Quick! Log out and shut down jupyterhub" class="md-nav__link">
+    Quick! Log out and shut down jupyterhub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" title="Next Steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/edit/master/docs/install_jupyterhub.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="install-jupyterhub">Install JupyterHub</h1>
+<p>After the server is set up, it is time to install JupyterHub.</p>
+<div class="toc">
+<ul>
+<li><a href="#install-jupyterhub">Install JupyterHub</a><ul>
+<li><a href="#update-system">Update System</a></li>
+<li><a href="#install-miniconda">Install Miniconda</a></li>
+<li><a href="#change-miniconda3-permissions">Change Miniconda3 Permissions</a></li>
+<li><a href="#create-a-virtual-environment-and-install-and-packages">Create a virtual environment and install and packages</a></li>
+<li><a href="#run-a-very-unsecured-instance-of-jupyter-hub-just-to-see-if-it-works">Run a very unsecured instance of Jupyter Hub just to see if it works</a></li>
+<li><a href="#quick-log-out-and-shut-down-jupyterhub">Quick! Log out and shut down jupyterhub</a></li>
+<li><a href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="update-system">Update System</h2>
+<p>It is probably best to update the packages installed on the server in case there are changes and updates to the operating system since the server was created. <code>sudo apt-get update</code> is probably a reflex for those that use Linux a lot. </p>
+<p>Open PuTTY and log into the server as the non-root sudo user we created in the last step. Then update the system:</p>
+<pre><code class="text">$ sudo apt-get update
+$ sudo apt-get upgrade
+</code></pre>
+
+<p><br></p>
+<h2 id="install-miniconda">Install Miniconda</h2>
+<p>Next we'll install <strong>Miniconda</strong>. The on the last JupyterHub deployment, I installed the full version of <strong>Anaconda</strong> in the the non-root user's home directory(<code>/home/peter/</code>). The user's home directory is the default Anaconda3 installation location. </p>
+<p>However, for this JupyterHub deployment, we'll install <strong>Miniconda</strong> in the <code>/opt</code> directory. The <strong>Miniconda</strong> install is lighter than <strong>Anaconda</strong>, and we don't need all the GUI applications that <strong>Anaconda</strong> provides. The packages that we need in this deployment of JupyterHub, we can install in a seperate virtual environment. </p>
+<p>I followed <a href="https://www.digitalocean.com/community/tutorials/how-to-install-the-anaconda-python-distribution-on-ubuntu-16-04">this tutorial</a> from Digital Ocean.</p>
+<p>Go to <a href="https://repo.continuum.io/archive/">https://repo.continuum.io/archive/</a> and look down the list of installs for the newest installer that corresponds to:</p>
+<ul>
+<li>Miniconda3 (not Miniconda2, we don't want legacy Python version 2.7)</li>
+<li>Linux</li>
+<li>x86</li>
+<li>64 (bit)</li>
+<li>.sh (linux shell script)</li>
+</ul>
+<p>The URL of the latest Miniconda install for Linux will look something like:</p>
+<pre><code class="text">https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+</code></pre>
+
+<p>To downland and install Miniconda on the server, we'll use the <code>curl</code> command and and run the bash installer from the command line:</p>
+<pre><code class="text">$ cd /tmp
+$ curl -O $ https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+$ sudo bash Miniconda3-latest-Linux-x86_64.sh
+</code></pre>
+
+<p>During the Miniconda install, we need to specify following installation directory:</p>
+<pre><code class="text">/opt/miniconda3/
+</code></pre>
+
+<p>We want to be able to run <strong>conda</strong> from the command line. So make sure to allow <strong>Miniconda</strong> to append your PATH during the installation. After installation, we need to reload the <code>.bashrc</code> file because <strong>Miniconda</strong> made changes to our <code>.bashrc</code> during the install (when it added <strong>conda</strong> to our PATH).</p>
+<pre><code class="text">$ cd ~
+$ source .bashrc
+</code></pre>
+
+<p>When the install is complete,  look in <code>/opt</code>, and see the <code>miniconda3</code> directory.</p>
+<pre><code class="text">$ cd /opt
+$ ls
+miniconda3
+</code></pre>
+
+<h2 id="change-miniconda3-permissions">Change Miniconda3 Permissions</h2>
+<p>Now we need to deal with some permission issues. Since I am running as the user <code>peter</code> on the Digital Ocean server, I need to make sure that the user <code>peter</code> has read, write, and execute permissions on the enitre <code>/opt/miniconda3/</code> directory.</p>
+<p>We can give our <code>peter</code> user permissions with <code>chmod</code> and <code>chown</code>.</p>
+<pre><code class="text">$ cd /opt
+$ ls
+miniconda3
+$ ls -la
+total 12
+drwxr-xr-x  3 root root 4096 Oct 30 04:47 .
+drwxr-xr-x 23 root root 4096 Oct 29 17:49 ..
+drwxr-xr-x 13 root root 4096 Oct 30 04:47 miniconda3
+</code></pre>
+
+<p>Currently, the owner of the <code>miniconda3</code> directory is <code>root</code> and the group is <code>root</code>. The owner <code>root</code> has read, write, execute privaleges (<code>rwx</code>) and the group <code>root</code> has read, execute privaleges (<code>r-x</code>), but now write prvialeges.</p>
+<p>Let's modify the read, write, execute privaleges so that the group <code>root</code> can read, write, and execute (<code>rwx</code>).</p>
+<pre><code class="text">$ sudo chmod -R g+w miniconda3/
+$ ls -la
+total 12
+drwxr-xr-x  3 root root 4096 Oct 30 04:47 .
+drwxr-xr-x 23 root root 4096 Oct 29 17:49 ..
+drwxrwxr-x 13 root root 4096 Oct 30 04:47 miniconda3
+</code></pre>
+
+<p>OK, now let's change the group corresponding to the <code>miniconda3/</code> directory from <code>root</code> to <code>peter</code>.</p>
+<pre><code class="text">$ sudo chown -R root:peter miniconda3/
+$ ls -la
+total 12
+drwxr-xr-x  3 root root  4096 Oct 30 04:47 .
+drwxr-xr-x 23 root root  4096 Oct 29 17:49 ..
+drwxrwxr-x 13 root peter 4096 Oct 30 04:47 miniconda3
+</code></pre>
+
+<p>Now the user <code>peter</code> will be able to install packages using <strong>conda</strong> and <strong>pip</strong> in the miniconda3 installation in the <code>/opt</code> directory.</p>
+<p>Now that the permissions are changed, we should be able to run <strong>conda</strong> from the command line. Try:</p>
+<pre><code>$ conda --version
+</code></pre>
+
+<p>If you see output, that means <strong>Miniconda</strong> was installed and <strong>conda</strong> can be run by the non-root user.</p>
+<p><br></p>
+<h2 id="create-a-virtual-environment-and-install-and-packages">Create a virtual environment and install and packages</h2>
+<p>For this JupyterHub install, we are going to create a conda environment (a virtual environment) and install packages into that environment. </p>
+<p>I had trouble with conda hanging during the JupterHub installation, and I wondered if it had something to do with the Anaconda installation being so large. (Really, now I think it might also have something to do with Python version 3.7). </p>
+<p>When I tried to make a Python 3.7 conda env and install JupyterHub into it, conda downgraded Python from 3.7 to 3.6. So I think the conda env should have a Python 3.6 base. Also don't forget to install <strong>xlrd</strong>, this package is needed for <strong>pandas</strong> to read <code>.xlsx</code> files. </p>
+<pre><code class="text">$ conda create -n jupyerhubenv python=3.6
+$ conda activate jupyterhubenv
+(jupyterhubenv)$ conda install numpy matplotlib pandas scipy sympy seaborn bokeh holoviews pyserial xlrd jupyter notebook 
+(jupyterhubenv)$ conda install -c conda-forge pint altair
+(jupyterhubenv)$ conda install -c conda-forge jupyterlab
+(jupyterhubenv)$ conda install -c conda-forge jupyterhub
+</code></pre>
+
+<p><br></p>
+<h2 id="run-a-very-unsecured-instance-of-jupyter-hub-just-to-see-if-it-works">Run a very unsecured instance of Jupyter Hub just to see if it works</h2>
+<p>OK let's give JupyterHub a whirl. We'll start JupterHub for the first time. Note the <code>--no-ssl</code> flag at the end of the command. This flag needs to be included or you won't be able to browse to the server. Also note we have to be our <code>(jupyterhubenv)</code> virtual environment active when we run the command. </p>
+<pre><code class="text">$(jupyterhubenv) jupyterhub --no-ssl
+</code></pre>
+
+<p>We see some output in the PuTTY window. The last line is something like <code>JupyterHub is now running at http://:8000/</code>. The first time I set up JupyterHub, I wasn't able to see the site using a web browser. No web page loaded, and the connection timed out.</p>
+<p><img alt="anaconda in start menu" src="../images/site_can't_be_reached.png" /></p>
+<p>Why? It turns out Digital Ocean installs a firewall called <strong>ufw</strong> by default and turns the <strong>ufw</strong> firewall on. When the server was created, ufw was configured to only allow incoming connections on ports 22, 80 and 433. This output is shown when we first log into the Digitial Ocean server:</p>
+<pre><code class="text">&quot;ufw&quot; has been enabled. All ports except 22 (SSH), 80 (http) and 443 (https)
+have been blocked by default.
+</code></pre>
+
+<p>But <strong>JupyterHub runs on port 8000</strong> - it tells us so when JupyterHub starts. So we need to configure <strong>ufw</strong> to allow connections on port 8000 (at least for now, just to see if JupyterHub works). </p>
+<p>To allow communication on port 8000 and start JupyterHub, type:</p>
+<pre><code class="text">$ sudo ufw allow 8000
+$ jupyterhub --no-ssl
+</code></pre>
+
+<p>Now we can browse to the server IP address of our Digital Ocean Droplet appended with <code>:8000</code>. The web address should look something like: http://165.228.68.178:8000. You can find the IP address of the server by going into the Digital Ocean dashboard. </p>
+<p>The JupyterHub login screen looks like:</p>
+<p><img alt="jupyter hub no ssl login" src="../images/jupyterhub_no_ssl_login.png" /></p>
+<p>Awesome! Quick log into JupyterHub using the username and password for the non-root sudo user (in my case <code>peter</code>) that we set up and are using in our current PuTTY session. </p>
+<p>You should see the typical notebook file browser with all the files you can see when you run <code>ls ~/</code>. Try creating and running a new Jupyter notebook. The notebook works just like a <strong>Jupyter notebook running locally</strong>.</p>
+<p><img alt="start my server" src="../images/start_my_server.PNG" />
+<img alt="jupyter file browser" src="../images/jupyter_file_browser.PNG" /></p>
+<p><br></p>
+<h2 id="quick-log-out-and-shut-down-jupyterhub">Quick! Log out and shut down jupyterhub</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Warning!</strong> You should not run JupyterHub without SSL encryption on a public network.</p>
+</div>
+<p><strong>Quick! Log out and shut down jupyterhub</strong>. (does quick really matter in internet security?) The site is running without any ssl security over regular HTTP not HTTPS. Key in [Ctrl] + [c] to stop JupyterHub.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>The next step is to aquire a domain name and link it to our Digital Ocean server.</p>
+<p><br></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../doserver/" title="DO server" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                DO server
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../DNS/" title="DNS Routing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                DNS Routing
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 Peter D. Kazarinoff
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

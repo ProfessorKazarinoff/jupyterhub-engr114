@@ -1,0 +1,765 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>GitHub OAuth - ENGR114-JupyterHub-Deployment</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../static/css/toc.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#github-authentication" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="ENGR114-JupyterHub-Deployment" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">build</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                ENGR114-JupyterHub-Deployment
+              </span>
+              <span class="md-header-nav__topic">
+                GitHub OAuth
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="ENGR114-JupyterHub-Deployment" class="md-nav__button md-logo">
+      
+        <i class="md-icon">build</i>
+      
+    </a>
+    ENGR114-JupyterHub-Deployment
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../setup/" title="Set Up" class="md-nav__link">
+      Set Up
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../doserver/" title="DO server" class="md-nav__link">
+      DO server
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../install_jupyterhub/" title="Install JupyterHub" class="md-nav__link">
+      Install JupyterHub
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../DNS/" title="DNS Routing" class="md-nav__link">
+      DNS Routing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ssl/" title="SSL Certificates" class="md-nav__link">
+      SSL Certificates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../cookie_secret_proxy_auth_token/" title="Cookie Secret and Proxy Auth Token" class="md-nav__link">
+      Cookie Secret and Proxy Auth Token
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nginx_install/" title="Install Nginx" class="md-nav__link">
+      Install Nginx
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nginx_config/" title="Nginx Configuration" class="md-nav__link">
+      Nginx Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../jupyterhub_config/" title="JupyterHub Configuration" class="md-nav__link">
+      JupyterHub Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../systemd/" title="System Service" class="md-nav__link">
+      System Service
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        GitHub OAuth
+      </label>
+    
+    <a href="./" title="GitHub OAuth" class="md-nav__link md-nav__link--active">
+      GitHub OAuth
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-oauthenticator" title="Install oauthenticator" class="md-nav__link">
+    Install oauthenticator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-github-oauth-app" title="Create GitHub OAuth App" class="md-nav__link">
+    Create GitHub OAuth App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-jupyterhub_configpy-to-use-github-oauth" title="Modify jupyterhub_config.py to use GitHub OAuth" class="md-nav__link">
+    Modify jupyterhub_config.py to use GitHub OAuth
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-jupyterhub-and-login-with-github" title="Restart JupyterHub and login with GitHub" class="md-nav__link">
+    Restart JupyterHub and login with GitHub
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../google_oauth/" title="Google OAuth" class="md-nav__link">
+      Google OAuth
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../jupyterlab_default/" title="JupyterLab Default Interface" class="md-nav__link">
+      JupyterLab Default Interface
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../login_page/" title="Custom Login Page" class="md-nav__link">
+      Custom Login Page
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../github_assignments/" title="Assignments from GitHub" class="md-nav__link">
+      Assignments from GitHub
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../useful_commands/" title="Usefull Commands" class="md-nav__link">
+      Usefull Commands
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-oauthenticator" title="Install oauthenticator" class="md-nav__link">
+    Install oauthenticator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-github-oauth-app" title="Create GitHub OAuth App" class="md-nav__link">
+    Create GitHub OAuth App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-jupyterhub_configpy-to-use-github-oauth" title="Modify jupyterhub_config.py to use GitHub OAuth" class="md-nav__link">
+    Modify jupyterhub_config.py to use GitHub OAuth
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-jupyterhub-and-login-with-github" title="Restart JupyterHub and login with GitHub" class="md-nav__link">
+    Restart JupyterHub and login with GitHub
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/edit/master/docs/github_oauth.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="github-authentication">GitHub Authentication</h1>
+<p>JuptyerHub is working, but a problem is that we have to add new users(students) to the serever manually. It would be better if users could log in to JupyterHub with their own usernames and passwords. It would also be nice to not have to manage any of these usernames or passwords. </p>
+<p>One solution to this problem is have students log into JupyterHub with GitHub usernames and passwords.</p>
+<div class="toc">
+<ul>
+<li><a href="#github-authentication">GitHub Authentication</a><ul>
+<li><a href="#install-oauthenticator">Install oauthenticator</a></li>
+<li><a href="#create-github-oauth-app">Create GitHub OAuth App</a></li>
+<li><a href="#modify-jupyterhub_configpy-to-use-github-oauth">Modify jupyterhub_config.py to use GitHub OAuth</a></li>
+<li><a href="#restart-jupyterhub-and-login-with-github">Restart JupyterHub and login with GitHub</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>In the current setup, users (students) have to be added to the JupyterHub server before they can log in. This is OK for a small team or a couple users, but for a college class, creating a new user on the server for each student, then emailing each student a seperate username and password... </p>
+<p>Ah! what a mess. </p>
+<p>One solution is to give JupyterHub the authority to create new users on the server.  Then allow users (students) to login to JupyterHub with usernames and passwords they already have.</p>
+<p>One of the ways students could log into JupyterHub is using their GitHub credentials. This solution requires each student to have a GitHub account. A GitHub account for each student might be worth it. A benefit is a GitHub account gives students exposure to <strong>git</strong> and GitHub as a tools. </p>
+<p>So let's give the GitHub authenticator for JupyterHub  a whirl. The GitHub authenticator is also pretty well documented, so it's good authenticator to try first.</p>
+<h2 id="install-oauthenticator">Install oauthenticator</h2>
+<p>To use the GitHub authenticator in JupyterHub, first we need to install <strong>oauthenticator</strong>. I couldn't find oauthenticator on conda-forge so I installed it with <strong>pip</strong>. Remember we need to be in the <code>(jupyterhubenv)</code> virtual environment when we run the <code>pip</code> command.</p>
+<pre><code class="text">$ conda activate jupyterhubenv
+(jupyterhubenv)$ pip install conda install oauthenticator
+</code></pre>
+
+<h2 id="create-github-oauth-app">Create GitHub OAuth App</h2>
+<p>Next we need to log into GitHub and create an OAuth App. After the GitHub OAuth App is created, copy the <strong>Client ID</strong> and <strong>Client Secret</strong>. The processes is:</p>
+<p>GitHub profile --&gt; Settings --&gt; Developer Settings --&gt; OAuth Apps --&gt; Register a new application</p>
+<p><img alt="GitHub settings" src="../images/github_settings.png" /></p>
+<p><img alt="GitHub developer settings" src="../images/github_developer_settings.png" /></p>
+<p><img alt="GitHub register new applicaiton" src="../images/github_register_new_application.png" /></p>
+<p>Set the <strong>Homepage URL</strong> as:</p>
+<pre><code>https://mydomain.org/
+</code></pre>
+<p>Set the <strong>Authorization call-back URL</strong> as:</p>
+<pre><code>https://mydomain.org/hub/oauth_callback
+</code></pre>
+<p>Then click [Register Application]</p>
+<p><img alt="GitHub register new app" src="../images/github_register_oauth_app.png" /></p>
+<p>In the App Settings page, we need to copy two settings:</p>
+<ul>
+<li>Client ID</li>
+<li>Client Secret</li>
+</ul>
+<p><img alt="GitHub client id and secret" src="../images/github_client_id_and_secret.png" /></p>
+<p>The <strong>Client ID</strong> and <strong>Client Secret</strong> strings will be pasted into the jupyterhub_config.py file. </p>
+<p><br></p>
+<h2 id="modify-jupyterhub_configpy-to-use-github-oauth">Modify jupyterhub_config.py to use GitHub OAuth</h2>
+<p>Now we'll edit the <code>jupyterhub_config.py</code> file to include a couple additional lines. </p>
+<p>Note in the configuration below, <code>#c.Authenticator.whitelist</code> is commented out. We want to see if a GitHub user can log onto the server (which will automatically create a new user and spawn a Jupyter notebook server) and run notebooks. Once we know the server is working, we can un-comment the <code>#c.Authenticator.whitelist</code> and only allow in specific GitHub usernames. Also Note <code>c.LocalGitHubOAuthenticator.client_id = 'xxxx'</code> and <code>c.LocalGitHubOAuthenticator.client_secret='xxxx'</code> are the long strings from our GitHub OAuth App.</p>
+<pre><code class="python"># /etc/jupyterhub/jupyterhub_conf.py
+
+# Configuration file for JupyterHub to run GitHub OAuth.
+# Need to get client ID and client secret from GitHub --&gt; User Settings --&gt; Developer Settings --&gt; OAuth Apps
+# also need to pip install oauthenticator
+
+from oauthenticator.github import LocalGitHubOAuthenticator
+c.JupyterHub.authenticator_class = LocalGitHubOAuthenticator
+
+# Set up config
+c = get_config()
+c.JupyterHub.log_level = 10
+c.Spawner.cmd = '/opt/miniconda3/envs/jupyterhubenv/bin/jupyterhub-singleuser'
+
+# Cookie Secret Files
+c.JupyterHub.cookie_secret_file = '/srv/jupyterhub/jupyterhub_cookie_secret'
+c.ConfigurableHTTPProxy.auth_token = '/srv/jupyterhub/proxy_auth_token'
+
+# GitHub OAuth Login
+c.LocalGitHubOAuthenticator.oauth_callback_url = 'https://mydomain.org/hub/oauth_callback'
+c.LocalGitHubOAuthenticator.client_id = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+c.LocalGitHubOAuthenticator.client_secret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+c.LocalGitHubOAuthenticator.create_system_users = True
+
+#c.Authenticator.whitelist = {'peter','username1','username2'}
+c.Authenticator.admin_users = {'peter'}
+</code></pre>
+
+<h2 id="restart-jupyterhub-and-login-with-github">Restart JupyterHub and login with GitHub</h2>
+<p>Restart JupyterHub with:</p>
+<pre><code class="text">$ sudo systemctl stop jupyterhub
+$ sudo systemctl start jupyterhub
+$ sudo systemctl status jupyterhub
+# [Ctrl]-[c] to exit
+</code></pre>
+
+<p>Browse over to our server's URL. We see [Sign in with GitHub] in the middle of the page. Log into JupyterHub with a GitHub username and password. </p>
+<p><img alt="Sign in with GitHub" src="../images/sign_in_with_github.PNG" /></p>
+<p>After we log in using a GitHub username and password, we can see if JupyterHub created a new user (with our GitHub username) on the server. The command below produces a long list of users. The long list of users contains the non-root sudo user <code>peter</code> and the GitHub user.</p>
+<pre><code class="text">$ awk -F':' '{ print $1}' /etc/passwd
+
+....
+uuidd
+dnsmasq
+landscape
+sshd
+pollinate
+peter
+githubusername
+</code></pre>
+
+<p>We can also verify the GitHub user logged in by going to the <code>/home/</code> directory on the server. Inside of <code>/home/</code> should be a home directory for the GitHub user. Inside the GitHub user's directory are any notebooks we just created after we logged in with our GitHub credentials.</p>
+<pre><code class="text">$ cd /home
+$ ls
+peter  githubusername
+$ cd githubusername
+$ ls
+Untitled.ipynb 
+</code></pre>
+
+<p><br></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../systemd/" title="System Service" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                System Service
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../google_oauth/" title="Google OAuth" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Google OAuth
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 Peter D. Kazarinoff
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
