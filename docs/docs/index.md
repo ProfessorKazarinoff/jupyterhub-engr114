@@ -12,11 +12,9 @@ The GitHub repo for the deployment can be found here:
 
 <br>
 
-Click the menu items on the left to view the deployment steps
+Click the menu items on the left to view the deployment steps.
 
-![Deployment Menu](images/next_button.png)
-
-Or start [Here](#) and click the arrows at the bottom of each page.
+Or start [Here](setup.md) and click the arrows at the bottom of each page.
 
 ![Deployment Menu](images/deployment_menu.png)
 
