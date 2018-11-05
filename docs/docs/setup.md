@@ -18,7 +18,7 @@ Before creating the server, a set of private/public SSH keys are needed. SSH key
 
 An SSH terminal program is needed to communicate with the server. On Windows 10, I use [PuTTY](https://www.putty.org/). See [this post](https://pythonforundergradengineers.com/ssh-keys-with-putty.html) for a details. On MacOS and Linux, SSH from the command line works as well.
 
-It is helpful to have an SFTP client to move large files back and forth between a local computer and the server. On Windows 10, I use [FileZilla](https://filezilla-project.org/)
+It is helpful to have an SFTP client to move large files back and forth between a local computer and the server. On Windows 10, I use [FileZilla](https://filezilla-project.org/).
 
 ## Next Steps
 
