@@ -36,7 +36,7 @@
     
     
       
-        <title>JupyterHub Configuration - ENGR114-JupyterHub-Deployment</title>
+        <title>SSH Keys - ENGR114-JupyterHub-Deployment</title>
       
     
     
@@ -100,7 +100,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#jupyterhub-configuration" tabindex="1" class="md-skip">
+      <a href="#create-ssh-keys" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -126,7 +126,7 @@
                 ENGR114-JupyterHub-Deployment
               </span>
               <span class="md-header-nav__topic">
-                JupyterHub Configuration
+                SSH Keys
               </span>
             
           
@@ -265,11 +265,91 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../ssh_keys/" title="SSH Keys" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        SSH Keys
+      </label>
+    
+    <a href="./" title="SSH Keys" class="md-nav__link md-nav__link--active">
       SSH Keys
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Page Contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-ssh-keys-puttygen-and-why-do-this-first" title="Why SSH keys, PuTTYgen and why do this first?" class="md-nav__link">
+    Why SSH keys, PuTTYgen and why do this first?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-putty" title="Download PuTTY" class="md-nav__link">
+    Download PuTTY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-puttygen-and-create-ssh-key" title="Start PuTTYgen and create SSH key" class="md-nav__link">
+    Start PuTTYgen and create SSH key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-ssh-public-and-private-keys-to-documents-folder" title="Save SSH public and private keys to Documents folder" class="md-nav__link">
+    Save SSH public and private keys to Documents folder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy-the-public-key-to-clipboard" title="Copy the public key to clipboard" class="md-nav__link">
+    Copy the public key to clipboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" title="Summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" title="Next Steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -361,70 +441,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        JupyterHub Configuration
-      </label>
-    
-    <a href="./" title="JupyterHub Configuration" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../jupyterhub_config/" title="JupyterHub Configuration" class="md-nav__link">
       JupyterHub Configuration
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Page Contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create-jupyterhub_configpy" title="Create jupyterhub_config.py" class="md-nav__link">
-    Create jupyterhub_config.py
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modify-jupyterhub_configpy" title="Modify jupyterhub_config.py" class="md-nav__link">
-    Modify jupyterhub_config.py
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restart-nginx-and-start-jupyterhub-see-if-we-can-login" title="Restart nginx and start jupyterhub, see if we can login" class="md-nav__link">
-    Restart nginx and start jupyterhub, see if we can login
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-an-new-user-restart-jupyterhub-and-login" title="Create an new user, restart JupyterHub and Login." class="md-nav__link">
-    Create an new user, restart JupyterHub and Login.
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -533,29 +554,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-jupyterhub_configpy" title="Create jupyterhub_config.py" class="md-nav__link">
-    Create jupyterhub_config.py
+  <a href="#why-ssh-keys-puttygen-and-why-do-this-first" title="Why SSH keys, PuTTYgen and why do this first?" class="md-nav__link">
+    Why SSH keys, PuTTYgen and why do this first?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modify-jupyterhub_configpy" title="Modify jupyterhub_config.py" class="md-nav__link">
-    Modify jupyterhub_config.py
+  <a href="#download-putty" title="Download PuTTY" class="md-nav__link">
+    Download PuTTY
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#restart-nginx-and-start-jupyterhub-see-if-we-can-login" title="Restart nginx and start jupyterhub, see if we can login" class="md-nav__link">
-    Restart nginx and start jupyterhub, see if we can login
+  <a href="#start-puttygen-and-create-ssh-key" title="Start PuTTYgen and create SSH key" class="md-nav__link">
+    Start PuTTYgen and create SSH key
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-an-new-user-restart-jupyterhub-and-login" title="Create an new user, restart JupyterHub and Login." class="md-nav__link">
-    Create an new user, restart JupyterHub and Login.
+  <a href="#save-ssh-public-and-private-keys-to-documents-folder" title="Save SSH public and private keys to Documents folder" class="md-nav__link">
+    Save SSH public and private keys to Documents folder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy-the-public-key-to-clipboard" title="Copy the public key to clipboard" class="md-nav__link">
+    Copy the public key to clipboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" title="Summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" title="Next Steps" class="md-nav__link">
+    Next Steps
   </a>
   
 </li>
@@ -576,92 +618,62 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/edit/master/docs/jupyterhub_config.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/ProfessorKazarinoff/jupyterhub-engr114/edit/master/docs/ssh_keys.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="jupyterhub-configuration">JupyterHub Configuration</h1>
-<p>Next, we'll create a <code>jupyterhub_config.py</code> file and modify it to include our cookie secret and proxy auth token. </p>
+                <h1 id="create-ssh-keys">Create SSH keys</h1>
+<p>SSH keys allow us to log into the cloud server which will run JupyterHub. SSH keys come in pairs, a private key and a public key. The public key will be stored on the JupyterHub server and the private key will stay on our local machine. </p>
 <div class="toc">
 <ul>
-<li><a href="#jupyterhub-configuration">JupyterHub Configuration</a><ul>
-<li><a href="#create-jupyterhub_configpy">Create jupyterhub_config.py</a></li>
-<li><a href="#modify-jupyterhub_configpy">Modify jupyterhub_config.py</a></li>
-<li><a href="#restart-nginx-and-start-jupyterhub-see-if-we-can-login">Restart nginx and start jupyterhub, see if we can login</a></li>
-<li><a href="#create-an-new-user-restart-jupyterhub-and-login">Create an new user, restart JupyterHub and Login.</a></li>
+<li><a href="#create-ssh-keys">Create SSH keys</a><ul>
+<li><a href="#why-ssh-keys-puttygen-and-why-do-this-first">Why SSH keys, PuTTYgen and why do this first?</a></li>
+<li><a href="#download-putty">Download PuTTY</a></li>
+<li><a href="#start-puttygen-and-create-ssh-key">Start PuTTYgen and create SSH key</a></li>
+<li><a href="#save-ssh-public-and-private-keys-to-documents-folder">Save SSH public and private keys to Documents folder</a></li>
+<li><a href="#copy-the-public-key-to-clipboard">Copy the public key to clipboard</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#next-steps">Next Steps</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="create-jupyterhub_configpy">Create jupyterhub_config.py</h2>
-<p>We'll create the JupyterHub config file in the <code>/etc/jupyterhub</code> directory. After the directory is created, we need to modify the directory permissions. Then <code>cd</code> into it create the config file with <code>jupyterhub --generate-config</code>. Make sure you are in the <code>(jupyterhubenv)</code> virtual environment when you run the command.  </p>
-<pre><code>$ cd /etc
-$ mkdir jupyterhub
-$ sudo chown -R root:peter jupyterhub/
-$ sudo chmod -R g+rwx jupyterhub/
-$ cd jupyterhub
-$ conda activate jupyterhubenv
-(jupyterhubenv)$ jupyterhub --generate-config
-</code></pre>
-
-<h2 id="modify-jupyterhub_configpy">Modify jupyterhub_config.py</h2>
-<p>Now we'll modify the <code>jupyterhub_config.py</code> file to allow local spawners and include our user <code>peter</code> as an admin user:</p>
-<pre><code>$ nano jupyterhub_config.py
-</code></pre>
-
-<p>There will be a lot of commented out text in the <code>jupyterhub_config.py</code> file. At the top of the file, add the following:</p>
-<pre><code class="python"># /etc/jupyterhub/jupyterhub_config.py
-
-import os
-c = get_config()
-c.JupyterHub.log_level = 10
-c.Spawner.cmd = '/home/peter/miniconda3/envs/jupyterhubenv/bin/jupyterhub-singleuser'
-
-# Cookie Secret Files
-c.JupyterHub.cookie_secret_file = '/srv/jupyterhub/jupyterhub_cookie_secret'
-c.ConfigurableHTTPProxy.auth_token = '/srv/jupyterhub/proxy_auth_token'
-
-c.Authenticator.whitelist = {'peter'}
-c.Authenticator.admin_users = {'peter'}
-
-</code></pre>
-
-<p><br></p>
-<h2 id="restart-nginx-and-start-jupyterhub-see-if-we-can-login">Restart nginx and start jupyterhub, see if we can login</h2>
-<p>Now we'll restart Nginx and start JupyterHub. Not that this time when we start JupyterHub we don't need to use the <code>--no-ssl</code> flag. This is because we have SSL running on nginx. </p>
-<p>If it seems like Nginx isn't working, try <code>$ sudo systemctl status nginx</code> and see if nginx really started. If it didn't, try the command <code>nginx -t</code>. This command prints out any error messages if nginx failed to start. I had to trouble shoot Nginx many a lot before I got Nginx and JupyterHub working together.</p>
-<pre><code class="text">$ sudo systemctl stop nginx
-$ sudo systemctl start nginx
-$ sudo systemctl status nginx
-# [ctrl-c] to exit
-</code></pre>
-
-<p>Once Nginx is running, restart JupyterHub without the <code>--no-ssl</code> flag. Make sure the <code>(jupyterhubenv)</code> virtual environment is active before running the <code>jupyterhub</code> command.</p>
-<pre><code class="text">$ cd /etc/jupyterhub
-$ conda activate jupyterhubenv
-(jupyterhubenv)$ jupyterhub
-</code></pre>
-
-<p>Log in to JupyterHub with the non-root sudo username (<code>peter</code>) and password (same user that's running the PuTTY session). </p>
-<p>Now we can browse to our domain and see JupyterHub running in its full SSL glory.</p>
-<p><br></p>
-<h2 id="create-an-new-user-restart-jupyterhub-and-login">Create an new user, restart JupyterHub and Login.</h2>
-<p>OK, it's all well and good that we can log in. But the purpose of setting up JupyterHub is for multiple students to be able to log on an run Python code. To test if multiple students can run Python code on JupyterHub at the same time, we need to create another user on the server.</p>
-<p>If JupyterHub is still running, stop it with [Ctrl] + [c].  Let's create a new user and see if we can log in as her.</p>
-<pre><code class="text">$ sudo adduser kendra
-</code></pre>
-
-<p>Go through the prompts and remember the UNIX password. Now we'll modify <code>jupyterhub_conf.py</code> to include our new user <code>kendra</code> and add <code>peter</code> (our non-root sudo user) as an administrator:</p>
-<pre><code class="text">
-...
-
-c.Authenticator.whitelist = {'peter','kendra'}
-c.Authenticator.admin_users = {'peter'}
-
-</code></pre>
-
-<p>Restart JupyterHub and try and login as <code>kendra</code></p>
-<pre><code>(jupyterhubenv)$ jupyterhub
-</code></pre>
+<h2 id="why-ssh-keys-puttygen-and-why-do-this-first">Why SSH keys, PuTTYgen and why do this first?</h2>
+<p>When I set up the server the first time, one of the initial server setup steps was to add SSH keys (so the server has the SSH key when it initialized). </p>
+<p>I tried to create and save the SSH keys to the Digital Ocean (the cloud server provider) dashboard so the SSH keys would be on the server when the server first started. But I goofed up somehow and the server started without any SSH keys. </p>
+<p><strong>It was a BIG PAIN adding SSH keys after the server started for the first time.</strong> </p>
+<p>I ended up copying the public SSH key into pastebin.com, logging onto the server with the Digital Ocean console and used <code>wget</code> to bring a textfile of the SSH key from pastebin.com onto the server and then <code>mv</code> to copy the key name into the right location.</p>
+<p>I'm pretty sure that pasting a public SSH key into pastebin.com is not the best way to initially set up a server. So to make sure that doesn't happen again, we are going to generate the SSH keys first and set up the server second. </p>
+<p>SSH keys are needed to use PuTTY (regular PuTTY not PuTTYgen) to log into the server. Since I'm working on Windows 10, using PuTTYgen (a program that comes with PuTTY that generates SSH keys) seems like the easiest solution. </p>
+<h2 id="download-putty">Download PuTTY</h2>
+<p>I already have PuTTY installed on my Windows 10 machines at home and at work. The download link is below:</p>
+<p><a href="https://www.putty.org/">Download PuTTY</a></p>
+<p>PuTTY seems to want you to install lots of extra stuff when you run the installer. I didn't install any of the "offers" that popped up during installation.</p>
+<h2 id="start-puttygen-and-create-ssh-key">Start PuTTYgen and create SSH key</h2>
+<p>I went through <a href="https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-putty-on-digitalocean-droplets-windows-users">this tutorial</a> about how to set up SSH keys on Windows 10 for Digital Ocean when I created the first SSH key.</p>
+<p>Using the Windows start menu, open PuTTYgen (not regular PuTTY):</p>
+<p><img alt="PuTTYgen in Windows Start Menu" src="../images/puttygen_in_start_menu.png" /></p>
+<p><img alt="Putty in Windows Start Menu" src="../images/puttygen_key_generator.png" /></p>
+<p>Use the following parameters</p>
+<ul>
+<li>Type of key to generate: RSA</li>
+<li>Number of bits in generated key: 2048</li>
+</ul>
+<p>Then click [generate]</p>
+<p><img alt="PuTTYgen generate" src="../images/puttygen_generate.png" /></p>
+<p>This brings up a dialog to move the mouse around the empty area to generate some randomness. This is my favorite part! Just move the mouse around the dialog box until the progress bar ends. Fun.</p>
+<p><img alt="PuTTYgen key generator" src="../images/puttygen_key_generator.png" /></p>
+<p>When the next screen pops up, right-click and copy the contents of the Public Key. We'll need the public key contents available to paste into the server's SSH <code>authorized_keys</code> file. Include the rsa line in the text copied to the clipboard.</p>
+<h2 id="save-ssh-public-and-private-keys-to-documents-folder">Save SSH public and private keys to Documents folder</h2>
+<p>In the [Actions] section click [Save public key] and click [Save private key]</p>
+<p><img alt="PuTTYgen save public and private keys" src="../images/puttygen_save_public_private_key.png" /></p>
+<p>Make sure to save both the public and the private keys. Save these keys to an accessible folder. The first time I generated SSH keys, I saved the keys in the default location and couldn't access them later. The second time I created SSH keys, I created a folder in the Documents folder called ssh-keys and saved the public and private keys in <code>Documents\ssh-keys</code>. I saved the public key with the name: <code>public_key_jupyter_hub.txt</code>. The Digital Ocean documentation recommends a <code>.txt</code> file extension for the public key (so you can open it and copy the contents). The private key should have a .ppk file extension.</p>
+<p><img alt="PuTTYgen save public key name" src="../images/puttygen_public_key_save_name.png" /></p>
+<h2 id="copy-the-public-key-to-clipboard">Copy the public key to clipboard</h2>
+<p>Before closing PuTTYgen, make sure to copy the contents of the Public Key to the clipboard. We'll need the public key contents when we create the server. Copy all of the contents of the public SSH key including the rsa line. </p>
+<h2 id="summary">Summary</h2>
+<p>After completing these steps, we have a public and private SSH key pair saved in <code>Documents\ssh-keys</code>. We also have the contents of the public SSH key saved to the clipboard.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Next, we'll create a new server on Digital Ocean (called a <em>droplet</em>). Then we'll use the SSH keys we just created to log into the server and create a non-root sudo user.</p>
                 
                   
                 
@@ -682,7 +694,7 @@ c.Authenticator.admin_users = {'peter'}
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../nginx_config/" title="Nginx Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../setup/" title="Set Up" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -691,19 +703,19 @@ c.Authenticator.admin_users = {'peter'}
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Nginx Configuration
+                Set Up
               </span>
             </div>
           </a>
         
         
-          <a href="../systemd/" title="System Service" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../doserver/" title="Server Setup" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                System Service
+                Server Setup
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
