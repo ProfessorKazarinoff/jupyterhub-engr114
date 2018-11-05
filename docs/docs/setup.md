@@ -20,6 +20,10 @@ An SSH terminal program is needed to communicate with the server. On Windows 10,
 
 It is helpful to have an SFTP client to move large files back and forth between a local computer and the server. On Windows 10, I use [FileZilla](https://filezilla-project.org/).
 
+Locally, I use the [Anaconda distribution of Python](https://www.anaconda.com/download/) and the [Anaconda Prompt](https://conda.io/docs/) to create virtual environments and run Python code.
+
+This JupyterHub deployment runs on a [Digital Ocean](https://www.digitalocean.com/) virtual private server. Local development and testing was completed on a Windows 10 laptop and desktop. 
+
 ## Next Steps
 
 The next step is to create a public-private SSH key pair with PuTTYgen. We'll use this public-private SSH key to log into the server with PuTTY.
