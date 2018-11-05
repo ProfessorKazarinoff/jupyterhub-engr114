@@ -75,4 +75,8 @@ $ ps aux | grep configurable-http-proxy
 $ kill #### 
 ```
 
+## Next Steps
+
+The next step is to have JupyterHub accept GitHub usernames and passwords. This will allow students with Github accounts to log into JupyterHub and means we don't have to deal with creating new users and sending students usernames and passwords.
+
 <br>

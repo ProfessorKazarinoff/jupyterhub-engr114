@@ -151,4 +151,8 @@ $ sudo systemctl status jupyterhub
 
 To exit the status screen, use [Ctrl] + [c].
 
+## Next Steps
+
+That's the end of our JupyterHub deployment. Now we need to test and have students login and use JupyterHub. The next page contains useful commands for someone deploying JupyterHub on a Digital Ocean cloud server.
+
 <br>

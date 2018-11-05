@@ -73,3 +73,5 @@ After completing these steps, we have a public and private SSH key pair saved in
 ## Next Steps
 
 Next, we'll create a new server on Digital Ocean (called a _droplet_). Then we'll use the SSH keys we just created to log into the server and create a non-root sudo user.
+
+<br>

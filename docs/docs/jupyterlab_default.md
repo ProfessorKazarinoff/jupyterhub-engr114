@@ -126,4 +126,8 @@ If we [Stop My Server], then re-[Start My Server], we end up back in the Jupyter
 
 ![back to JupyterLab landing page](images/back_to_jupyterlab.png)
 
+## Next Steps
+
+The next step to build a custom login page. When students visit our domain, instead of seeing the regular JupyterHub login page, they see a custom login page that looks a lot like our college login page. This custom login page will look familiar to students.
+
 <br>

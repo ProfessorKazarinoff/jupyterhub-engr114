@@ -126,4 +126,8 @@ Below is the look of the modified login page in all it's custom html and css glo
 
 ![login page image](images/custom_login_page.PNG)
 
+## Next Steps
+
+The next step is to create a set of notes and assignments in a GitHub repo. Then have JupyterHub pull down this GitHub repo for each student when the log in. This means the notes and assignments for the course are pre-populated in each student's JupyterLab file tree each time they start JupyterHub.
+
 <br>

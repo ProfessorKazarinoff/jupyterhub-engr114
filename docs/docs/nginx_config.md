@@ -114,6 +114,8 @@ When we browse to our domain name, we can see Nginx is running.
 
 ![nginx welcome page](images/welcome_to_nginx.png)
 
-Next step is to create and modify the ```jupyterhub_config.py``` file.
+## Next Steps
+
+The next step configure JupyterHub by creating and modifying a ```jupyterhub_config.py``` file.
 
 <br>

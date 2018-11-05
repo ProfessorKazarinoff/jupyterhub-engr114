@@ -81,4 +81,8 @@ Now we can browse over to the domain (the domain we set up with Digital Ocean DN
 
 ![nginx welcome page](images/welcome_to_nginx.png)
 
+## Next Steps
+
+Now that Nginx is installed, the next step is to configure Nginx to use our SSL certificate and run as a reverse proxy for our JupyterHub server.
+
 <br>

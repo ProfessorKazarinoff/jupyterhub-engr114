@@ -252,4 +252,6 @@ $ exit
 
 ## Next Steps
 
-The next step is to install **Miniconda**, create a virtual environment and install **JupyterHub**.
+The next step is to install **Miniconda**, create a virtual environment, and install **JupyterHub**.
+
+<br>

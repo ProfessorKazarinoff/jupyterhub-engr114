@@ -100,3 +100,9 @@ Restart JupyterHub and try and login as ```kendra```
 ```
 (jupyterhubenv)$ jupyterhub
 ```
+
+## Next Steps
+
+The next step is to run JupyterHub as a system service. This allows JupyterHub to run continuously even if we aren't logged into the server. It also allows us to work on our JupyterHub deployment while it is still running.
+
+<br>

@@ -112,3 +112,9 @@ githubusername
 ```
 
 <br>
+
+## Next Steps
+
+The next step is to use the JupyterLab interface as the default interface. This means when students log into JupyterHub, they see JupyterLab instead of the typical Jupyter notebook file browser.
+
+<br>

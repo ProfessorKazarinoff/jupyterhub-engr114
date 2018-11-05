@@ -62,4 +62,6 @@ The first time I set up DNS on Digital Ocean, I added the custom DNS servers to 
 
 ## Next Steps
 
-The next step is to obtain an SSL cirtificute.
+The next step is to obtain an SSL certificate so we can SSL security and https instead of http.
+
+<br>

@@ -137,4 +137,8 @@ $ ls
 Untitled.ipynb 
 ```
 
+## Next Steps
+
+The next step is to program JupyterHub to accept Google usernames and passwords. This will allow students to log into JupyterHub using their college usernames and passwords.
+
 <br>
