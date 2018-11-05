@@ -16,9 +16,13 @@ Click the menu items on the left to view the deployment steps.
 
 Or start [Here](setup.md) and click the arrows at the bottom of each page.
 
-![Deployment Menu](images/deployment_menu.png)
+[![Next Setup Arrow](images/next_setup.png)](setup.md)
 
 <br>
+
+## What is JupyterHub?
+
+JupyterHub is a server-hosted distributed Jupyter notebook deplpyment. JupyterHub allows different users to log into a server and write Python code within a web browswer without any installation. Anywhere you have an internet connection, you can bring up a JupyterHub webpage and write/run Python code. The Jupyter notebook interface that JupyterHub provides is the same Jupyter Notebook interface you run locally. Because JupyterHub runs in a web browser, it even works on tablets and phones.
 
 ## Why JupyterHub?
 
