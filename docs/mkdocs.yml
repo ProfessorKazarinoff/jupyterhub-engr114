@@ -3,6 +3,7 @@ site_name: ENGR114-JupyterHub-Deployment
 # Configuration
 theme:
   name: 'material'
+  custom_dir: 'theme'
   language: 'en'
   palette:
     primary: 'deep orange'
