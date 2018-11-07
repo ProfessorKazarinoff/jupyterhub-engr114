@@ -19,9 +19,9 @@ $ sudo apt-get upgrade
 
 ## Install Miniconda
 
-Next we'll install **Miniconda**. The on the last JupyterHub deployment, I installed the full version of **Anaconda** in the the non-root user's home directory(```/home/peter/```). The user's home directory is the default Anaconda3 installation location. 
+Next we'll install **Miniconda**. In the last JupyterHub deployment, I installed the full version of **Anaconda** in the non-root user's home directory(```/home/peter/```). The user's home directory is the default Anaconda3 installation location. 
 
-However, for this JupyterHub deployment, we'll install **Miniconda** in the ```/opt``` directory. The **Miniconda** install is lighter than **Anaconda**, and we don't need all the GUI applications that **Anaconda** provides. The packages that we need in this deployment of JupyterHub, we can install in a seperate virtual environment. 
+However, for this JupyterHub deployment, we'll install **Miniconda** in the ```/opt``` directory. The **Miniconda** install is lighter than the full **Anaconda** install, and we don't need all the GUI applications that **Anaconda** provides. The packages that we need in this deployment of JupyterHub, we can install in a seperate virtual environment. 
 
 I followed [this tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-the-anaconda-python-distribution-on-ubuntu-16-04) from Digital Ocean.
 

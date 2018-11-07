@@ -32,19 +32,22 @@ First, a set of custom **jinja** templates need to be created. When JupyterHub r
 └── token.html
 ```
 
-Now we need to copy these templates into a new ```/etc/jupyterhub/templates``` directory. Once copied, we can modify the templates and create a new JupyterHub login page. ```login.html``` file we'll customize.
+Now we need to copy these templates into a new ```/etc/jupyterhub/templates``` directory. Once copied, we can modify the templates and create a new JupyterHub login page. ```login.html``` is the file we'll customize.
 
 ```text
-$ cd /opt/miniconda3/envs/jupyterhubenv/pkgs/jupyterhub/share/jupyter/hub/
+$ cd /opt/miniconda3/envs/jupyterhubenv/share/jupyterhub
 $ ls
+static  templates
 $ cp -R templates /etc/jupyterhub/templates/
 $ cd /etc/jupyterhub/templates
 $ ls
+404.html    error.html  login.html   oauth.html  spawn.html          stop_pending.html
+admin.html  home.html   logout.html  page.html   spawn_pending.html  token.html
 ```
 
 ## Modify login.html
 
-Open up the ```login.html``` file and modify it with any html that you want to show up when a user goes to the JupyterHub site.
+Open up the ```login.html``` file and modify it with any html that you want to show up when a user goes to the JupyterHub site. This is what the user will see first thing, before they have logged in.
 
 I messed around for WAY to long trying to get my custom login page to look like the college login page. An important piece of html that needs to stay in the ```login.html``` file is the ```<a>``` tag that links to the authentication url. The complete tag is detailed below
 
