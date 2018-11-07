@@ -2,11 +2,11 @@
 
 The JupyterHub login page looks like this:
 
-![jupyterhub login page](images/login_with_google.PNG)
+![JupyerHub login with Google page](images/login_with_google.PNG)
 
 But our college login page looks like this:
 
-![jupyterhub login page](images/college_login_page.PNG)
+![MyPCC login page](images/college_login_page.PNG)
 
 For users to feel comfortable with logging into the JupyterHub server, we'll make the JupyterHub login page look more like the college login page.
 
@@ -16,7 +16,7 @@ For users to feel comfortable with logging into the JupyterHub server, we'll mak
 
 This was a time consuming and fussy task. It involved a lot of messing around with css and html.
 
-First, a set of custom **jinja** templates need to be created. When JupyterHub runs, there is a directory of jinja templates that build the html users see when they browse to the login page. These jinga templates are burried deep in the JupyterHub package code. For my JupyterHub installation on the server, I found the jinja template files in the ```/opt/aminconda3/envs/pkgs/jupyterhub/share/jupyterhub/templates/``` directory. If you aren't using a virtual environment, the JupyterHub package directory name will likey be different:
+First, a set of custom **jinja** templates need to be created. When JupyterHub runs, there is a directory of jinja templates that build the html users see when they browse to the login page. These jinga templates are burried deep in the JupyterHub package code. For my JupyterHub installation on the server, I found the jinja template files in the ```/opt/miniconda3/envs/jupyterhubenv/share/jupyterhub/templates/``` directory. If you aren't using a virtual environment, the JupyterHub package directory name will likey be different:
 
 ```text
 /opt/anaconda3/envs/pkgs/jupyterhub/share/jupyterhub/templates/
@@ -49,7 +49,7 @@ admin.html  home.html   logout.html  page.html   spawn_pending.html  token.html
 
 Open up the ```login.html``` file and modify it with any html that you want to show up when a user goes to the JupyterHub site. This is what the user will see first thing, before they have logged in.
 
-I messed around for WAY to long trying to get my custom login page to look like the college login page. An important piece of html that needs to stay in the ```login.html``` file is the ```<a>``` tag that links to the authentication url. The complete tag is detailed below
+I messed around for WAY to long trying to get my custom login page to look like the college login page. An important piece of html that needs to stay in the ```login.html``` file is the ```<a>``` tag that links to the authentication url. The complete tag is detailed below:
 
 ```html
 <!–– login.html ––>
@@ -67,8 +67,7 @@ I also kept in the jinga tag at the top of the file that brings in all of the fo
 {% extends "page.html" %}
 ```
 
-
-All the changes I made to the login template were inside the "login" block of ```login.html```. You can find my complete ```login.html``` file [here](https://github.com/ProfessorKazarinoff/jupyterhub-engr114/blob/master/templates/login.html)
+All the changes I made to the login template were inside the "login" block of ```login.html```. 
 
 ```html
 {% block login %}
@@ -77,6 +76,12 @@ All the changes I made to the login template were inside the "login" block of ``
 
 {% endblock login %}
 ```
+
+You can find my complete ```login.html``` file on GitHub [here](https://github.com/ProfessorKazarinoff/jupyterhub-engr114/blob/master/templates/login.html). 
+
+I used the FileZilla SFTP Windows App to move over the ```login.html```. To use FileZilla, Select [File] --> [Site Manager]. Select [SFTP], add the server IP address, username, and select [Log in Type] --> [Key File]. FileZilla settings are below:
+
+![FileZilla SFTP settings](images/filezilla_settings.png)
 
 ## Modify jupyterhub_config.py
 
@@ -96,6 +101,27 @@ c.JupyterHub.template_paths = ['/etc/jupyterhub/templates/']
 
 ```
 
+## Restart JupyterHub and view changes
+
+With changes to the ```login.html``` file complete and the ```template_paths=``` set in ```jupyterhub_config.py```, we can restart JupyterHub and view the changes rendered on the login page.
+
+```text
+$ sudo systemctl stop jupyterhub
+$ sudo systemctl start jupyterhub
+$ sudo systemctl status jupyterhub
+# [Ctrl]-[c] to exit
+```
+
+The new login page is below:
+
+![MyPCC Login no css](images/mypcc_sign_in_no_css.png)
+
+The login works, but the issue is that without an css, the page looks plain and doesn't really look like the college login page:
+
+![MyPCC login page](images/college_login_page.PNG)
+
+Therefore, we need to add some css styling to the page.
+
 <br>
 
 ## Style the login page with css
@@ -107,16 +133,18 @@ This is another thing I messed around with for a long time, a WAY to long time. 
 The solution I finally got to work was modifying the ```style.min.css``` file itself that JupyterHub uses. This file is buried deep in the JupyterHub package code:
 
 ```
-/opt/miniconda3/envs/jupyterhubenv/pkgs/jupyterhub/share/jupyter/hub/static/css/
+/opt/miniconda3/envs/jupyterhubenv/share/jupyterhub/static/css
 ├── style.min.css
 └── style.min.css.map
 ```
 
-Modify the ```style.min.css``` file to include all the custom css styling desired (find my complete css file [here](https://github.com/ProfessorKazarinoff/jupyterhub-engr114/blob/master/style.min.css)) 
+Modify the ```style.min.css``` file to include all the custom css styling desired (find my complete css file on GitHub [here](https://github.com/ProfessorKazarinoff/jupyterhub-engr114/blob/master/style.min.css)) 
+
+I used FileZilla again to move over the file. ```style.min.css``` is a pretty big file and copying and pasting into PuTTY would probably lead to a lot of errors.
 
 ## Restart JupyterHub
 
-With changes to the ```login.html``` file and s```tyle.min.css``` file complete, we can restart JupyterHub and view the changes rendered on the login page.
+With changes to the ```login.html``` file and ```style.min.css``` file complete, we can restart JupyterHub and view the changes rendered on the login page.
 
 ```text
 $ sudo systemctl stop jupyterhub
@@ -127,7 +155,7 @@ $ sudo systemctl status jupyterhub
 
 Below is the look of the modified login page in all it's custom html and css glory:
 
-![login page image](images/custom_login_page.PNG)
+![login page image](images/sign_in_with_pcc_with_css.png)
 
 ## Next Steps
 
