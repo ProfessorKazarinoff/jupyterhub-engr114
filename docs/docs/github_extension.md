@@ -43,9 +43,17 @@ $ sudo systemctl status jupyterhub
 
 ## Modify notebook config file
 
+## pip install GitHub server extension
+
 ## Point JupyterHub to notebook config file
 
 ## Restart JupyterHub
 
 ## A way to put a default repo in?
+
+In the notebook config file (not the jupyterhub config file):
+
+```
+c.GitHubConfig.api_url = 'https://git.myserver.com/api/v3'
+```
 
