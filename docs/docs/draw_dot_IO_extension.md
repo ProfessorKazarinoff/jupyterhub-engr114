@@ -31,8 +31,14 @@ $ sudo systemctl status jupyterhub
 [Ctrl]-[c] to exit
 ```
 
-![Draw.IO Extension Launcher Tile](#)
+![Draw.IO Extension Launcher Tile](images/jupyterlab_add_launcher.png)
 
-![Draw.IO window](#)
+![Draw.IO window](images/jupyterlab_add_diagram_block.png)
 
-![Draw.IO flow chart](#)
+![Draw.IO flow chart](images/draw_dot_io_flow_chart.png)
+
+## Next Steps
+
+The next step is to create a set of notes and assignments in a GitHub repo. Then have JupyterHub pull down this GitHub repo for each student when the log in. This means the notes and assignments for the course are pre-populated in each student's JupyterLab file tree each time they start JupyterHub.
+
+<br>

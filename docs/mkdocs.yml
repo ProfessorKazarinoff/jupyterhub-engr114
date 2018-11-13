@@ -41,5 +41,6 @@ nav:
   - Google OAuth: google_oauth.md
   - JupyterLab Default Interface: jupyterlab_default.md
   - Custom Login Page: login_page.md
+  - Install Draw.IO extension: draw_dot_IO_extension.md
   - Assignments from GitHub: github_assignments.md
   - Usefull Commands: useful_commands.md
