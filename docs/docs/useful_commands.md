@@ -43,6 +43,11 @@ sudo systemctl <start|stop|status> jupyterhub
 $ export OAUTH_CLIENT_SECRET=xxxxxxxxxxx
 ```
 
+### Gitpuller extension URLs
+
+```
+https://domain.org/hub/user-redirect/git-pull?repo=GitHubUserName%2FRepoName&branch=master&app=lab
+
 ### change the systemctl start jupyterhub configurations
 
 if changes are made to /etc/systemd/system/jupyterhub.service need to reload:
