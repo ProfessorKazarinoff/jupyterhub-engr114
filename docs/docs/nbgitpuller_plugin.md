@@ -10,7 +10,7 @@ The repo for the nbgitpuller plugin is here:
 
 The URL for the auto-generated URL contruction app in Binder is here:
 
- > [https://hub.mybinder.org/user/jupyterhub-nbgitpuller-em8erjxr/apps/binder/link_generator.ipynb](https://hub.mybinder.org/user/jupyterhub-nbgitpuller-em8erjxr/apps/binder/link_generator.ipynb)
+ > [https://mybinder.org/v2/gh/jupyterhub/nbgitpuller/master?urlpath=apps/binder%2Flink_generator.ipynb](https://mybinder.org/v2/gh/jupyterhub/nbgitpuller/master?urlpath=apps/binder%2Flink_generator.ipynb)
 
 ## Install nbgitpuller plugin
 

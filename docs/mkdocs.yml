@@ -19,6 +19,7 @@ markdown_extensions:
   - admonition
   - footnotes
   - toc
+  - pymdownx.smartsymbols
 repo_url: https://github.com/ProfessorKazarinoff/jupyterhub-engr114
 extra_css: 
     - static/css/toc.css
@@ -43,5 +44,6 @@ nav:
   - Custom Login Page: login_page.md
   - Install Draw.IO extension: draw_dot_IO_extension.md
   - GitHub Extension: github_extension.md
-  - Gitpuller Plugin: nbgitpuller_plugin.md
+  - nbGitpuller Plugin: nbgitpuller_plugin.md
+  - Defaut URL for nbGitpuller: nbgitpuller_defaut_url.md
   - Usefull Commands: useful_commands.md
