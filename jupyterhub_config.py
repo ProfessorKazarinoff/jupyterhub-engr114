@@ -51,54 +51,6 @@ c.Authenticator.add_user_cmd = ['adduser', '-q', '--gecos', '""', '--disabled-pa
 c.LocalGoogleOAuthenticator.hosted_domain = 'college_name.edu'
 c.LocalGoogleOAuthenticator.login_service = 'Your College Name'
 
-# For Google OAuth Authentication
-#from oauthenticator.google import LocalGoogleOAuthenticator
-#
-#c.JupyterHub.authenticator_class = LocalGoogleOAuthenticator
-#
-#c.LocalGoogleOAuthenticator.create_system_users = True
-#
-#c.LocalGoogleOAuthenticator.hosted_domain = 'pcc.edu'
-#c.LocalGoogleOAuthenticator.login_service = 'Portland Community College'
-#
-#c.LocalGoogleOAuthenticator.oauth_callback_url = 'https://engr114.org/hub/oauth_callback'
-#c.LocalGoogleOAuthenticator.oauth_client_id = '588899608603-am59ejehnu06gq848nv5e8vll1jcq9bp.apps.googleusercontent.com'
-#
-#c.LocalGoogleOAuthenticator.oauth_client_secret = '00JHaoj-hBk4188_PfYRqVtg'
-#c.Authenticator.add_user_cmd = 
-#['adduser', '-q', '--gecos', '""', '--disabled-password', '--force-badname']
-# c.Authenticator.whitelist = {'peter.kazarinoff','peter','sergio.amador','dan.kruger','sophia.lichensteinhill'}
-#c.Authenticator.admin_users = {'peter.kazarinoff'}
-
-
-# GitHub Authenticator
-#from oauthenticator.github import LocalGitHubOAuthenticator
-#c.JupyterHub.authenticator_class = LocalGitHubOAuthenticator
-#
-#c.LocalGitHubOAuthenticator.oauth_callback_url = 'https://engr114.org/hub/oauth_callback'
-#c.LocalGitHubOAuthenticator.client_id = '32a7be8ce47d5f998406'
-#c.LocalGitHubOAuthenticator.client_secret = '9ee84d6e7988dc9f2cc492fe483a03efca25b336'
-#
-#c.LocalGitHubOAuthenticator.create_system_users = True
-#c.Authenticator.whitelist = {'peter','kendra'}
-#c.Authenticator.admin_users = {'peter'}
-
-# For Google OAuth Authentication
-#from oauthenticator.google import LocalGoogleOAuthenticator
-#c.JupyterHub.authenticator_class = LocalGoogleOAuthenticator
-#
-#c.LocalGoogleOAuthenticator.create_system_users = True
-#
-#c.LocalGoogleOAuthenticator.hosted_domain = 'pcc.edu'
-#c.LocalGoogleOAuthenticator.login_service = 'Portland Community College'
-#
-#c.LocalGoogleOAuthenticator.oauth_callback_url = 'https://engr114.org/hub/oauth_callback'
-#c.LocalGoogleOAuthenticator.oauth_client_id = '588899608603-am59ejehnu06gq848nv5e8vll1jcq9bp.apps.googleusercontent.com'
-#c.LocalGoogleOAuthenticator.oauth_client_secret = '00JHaoj-hBk4188_PfYRqVtg'
-#c.Authenticator.add_user_cmd = ['adduser', '-q', '--gecos', '""', '--disabled-password', '--force-badname']
-#
-#c.Authenticator.whitelist = {'peter','peter.kazarinoff'}
-#c.Authenticator.admin_users = {'peter','peter.kazarinoff'}
 
 # Configuration file for jupyterhub.
 

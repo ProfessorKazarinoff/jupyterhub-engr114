@@ -53,42 +53,6 @@ c.Authenticator.whitelist = {'test.student2','peter','test.student2','test.stude
 c.Authenticator.admin_users = {'test.student2'}
 
 
-#import os
-#from oauthenticator.github import LocalGitHubOAuthenticator
-#c.JupyterHub.authenticator_class = LocalGitHubOAuthenticator
-#c.LocalGitHubAuthenticator.create_system_users = True
-#c.JupyterHub.allow_named_servers = True
-# use GitHub OAuthenticator for local users
-#c.JupyterHub.authenticator_class = 'oauthenticator.LocalGitHubOAuthenticator'
-#c.GitHubOAuthenticator.oauth_callback_url = os.environ['OAUTH_CALLBACK_URL']
-#c.GitHub0Authenticator.client_id = os.environ['OAUTH_CLIENT_ID']
-#c.GitHub0Authenticator.client_secret = os.environ['OAUTH_CLIENT_SECRET']
-# create system users that don't exist yet
-#c.LocalAuthenticator.create_system_users = True
-
-# specify users and admin
-#c.Authenticator.whitelist = {'test.student2'}
-#c.Authenticator.admin_users = {'professorkazarinoff'}
-
-
-
-#from oauthenticator.github import GitHubOAuthenticator
-#c.JupyterHub.authenticator_class = GitHubOAuthenticator
-
-#c.MyOAuthenticator.oauth_callback_url = 'http[s]://[your-host]/hub/oauth_callback'
-#c.MyOAuthenticator.client_id = 'your-client-id'
-#c.MyOAuthenticator.client_secret = 'your-client-secret'
-
-#c.JupyterHub.ssl_cert = 'mycert.pem'
-#c.JupyterHub.ssl_key = 'mykey.key'
- #c.JupyterHub.ip = '127.0.0.1'
- #c.Authenticator.delete_invalid_users = True
-#c.JupyterHub.base_url = '/hub'
-#c.Authenticator.whitelist = {'peter', 'sergio', 'dan', 'test.student2'}
-#c.JupyterHub.base_url = u'/notebook'
-
-# Configuration file for jupyterhub.
-
 # jupyterhub_config.py file
 #c = get_config()
 
