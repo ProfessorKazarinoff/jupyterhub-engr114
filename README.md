@@ -1,4 +1,4 @@
-# jupyterhub-svr
+# jupyterhub-engr114
 
 This repo contains the shared files used to create a JupyterHub server on Digital Ocean using an Nginx proxy server and SSL security. This deployment is for an Engineering Programming class (ENGR114) at Portland Community College during Winter 2019.
 
@@ -28,11 +28,11 @@ For another deployment of JupyterHub on Digital Ocean with Nginx proxy. See thes
 12. Modify jupyterhub_config.py to include SSL keys
 13. Install Nginx
 14. Modify Nginx config to move traffic to JupyterHub and use SSL cirts
-15. Start Nginx and JupyterHub. Should be able to go to https://domain.org and start, run and save a Jupyter notebook.
-16. Set JupyterLab as the default interface (instead of the regular Jupyter notebook interface)
-17. Add authentication for GitHub usernames and passwords
-18. Add authentication for Google usernames and passwords
-19. Add custom login page
-20. Pull assignments and notes down from GitHub each time a student logs into JupyterHub.
-21. Celebrate!
-
+15. Run jupyterhub as a system service
+16. Start Nginx and JupyterHub. Should be able to go to https://domain.org and start, run and save a Jupyter notebook.
+17. Set JupyterLab as the default interface (instead of the regular Jupyter notebook interface)
+18. Add authentication for GitHub usernames and passwords
+19. Add authentication for Google usernames and passwords
+20. Add custom login page
+21. Pull assignments and notes down from GitHub each time a student logs into JupyterHub.
+22. Celebrate!
