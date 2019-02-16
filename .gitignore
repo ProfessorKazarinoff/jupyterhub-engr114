@@ -285,3 +285,7 @@ ENV/
 # MkDocs documentation
 site/
 jupyterhub-engr114-docs/site/
+
+# Google OAuth Client ID and Client Secret
+
+google_oauth_credentials.json

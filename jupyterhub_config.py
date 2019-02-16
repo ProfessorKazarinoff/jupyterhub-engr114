@@ -4,9 +4,8 @@
 # Need to get client ID and client secret from GitHub --> User Settings --> Developer Settings --> OAuth Apps
 # also need to pip install oauthenticator
 
-# For GitHub OAuth - Worked on 2018-11-01
-#from oauthenticator.github import LocalGitHubOAuthenticator
-#c.JupyterHub.authenticator_class = LocalGitHubOAuthenticator
+# 2019-02-15 bringing in the Google OAuth Client ID and Client Secret from a json file
+import json
 
 # For Google OAuth - Seems to work 2018-11-01
 from oauthenticator.google import LocalGoogleOAuthenticator
@@ -31,28 +30,25 @@ c.Spawner.default_url = '/lab'
 # install with $ jupyter labextension install @jupyterlab/hub-extension
 c.Spawner.cmd = ['jupyter-labhub']
 
-
 # Cookie Secret and Proxy Auth Token Files
 c.JupyterHub.cookie_secret_file = '/srv/jupyterhub/jupyterhub_cookie_secret'
 c.ConfigurableHTTPProxy.auth_token = '/srv/jupyterhub/proxy_auth_token'
 
-# GitHub OAuth Login - worked on 2018-11-01
-#c.LocalGitHubOAuthenticator.oauth_callback_url = 'https://engr114.org/hub/oauth_callback'
-#c.LocalGitHubOAuthenticator.client_id = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-#c.LocalGitHubOAuthenticator.client_secret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-#c.LocalGitHubOAuthenticator.create_system_users = True
+# 2019-02-15 Bring in Google OAuth client ID and client secret from json file
+with open('/etc/jupyterhub/google_oauth_credentials.json') as f:
+    google_oauth = json.load(f)
 
 # Google OAuth Login - Seems to work 2018-11-01
 c.LocalGoogleOAuthenticator.oauth_callback_url = 'https://engr114.org/hub/oauth_callback'
-c.LocalGoogleOAuthenticator.client_id = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-c.LocalGoogleOAuthenticator.client_secret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+
+c.LocalGoogleOAuthenticator.client_id = google_oauth['web']['client_id']
+c.LocalGoogleOAuthenticator.client_secret = google_oauth['web']['client_secret']
+
 c.LocalGoogleOAuthenticator.create_system_users = True
 c.Authenticator.add_user_cmd = ['adduser', '-q', '--gecos', '""', '--disabled-password', '--force-badname']
-c.LocalGoogleOAuthenticator.hosted_domain = 'college_name.edu'
-c.LocalGoogleOAuthenticator.login_service = 'Your College Name'
+c.LocalGoogleOAuthenticator.hosted_domain = 'pcc.edu'
+c.LocalGoogleOAuthenticator.login_service = 'Portland Community College'
 
-
-# Configuration file for jupyterhub.
 
 #------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration
