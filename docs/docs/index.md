@@ -38,9 +38,9 @@ A [series of blog posts](https://pythonforundergradengineers.com/why-jupyter-hub
 * Install PuTTY, generate SSH keys
 * Create server
 * Install JupyterHub and Python packages
-* Aquire and link domain name to server
-* Aquire SSL cirt
-* Create Cooke Secret, Proxy Auth Token, and dhparam.pem
+* Acquire and link domain name to server
+* Acquire SSL cert
+* Create Cookie Secret, Proxy Auth Token, and dhparam.pem
 * Install and configure Nginx
 * Configure JupyterHub
 * GitHub Authentication
